@@ -46,7 +46,9 @@ npm run lint
 npm run storybook
 ```
 
------
+---
+
 ### This project is developed by
+
 - [ismail-Elg](https://github.com/Ismail-Elg)
 - [Robbe Bierebeeck](https://github.com/RobbeBierebeeck)
