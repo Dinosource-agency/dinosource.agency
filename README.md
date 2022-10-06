@@ -39,3 +39,14 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+### Lint Storybook [Storybook](https://storybook.js.org/docs/vue/get-started/introduction)
+
+```sh
+npm run storybook
+```
+
+-----
+### This project is developed by
+- [ismail-Elg](https://github.com/Ismail-Elg)
+- [Robbe Bierebeeck](https://github.com/RobbeBierebeeck)
