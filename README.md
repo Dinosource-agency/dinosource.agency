@@ -48,6 +48,8 @@ npm run storybook
 
 ---
 
+### Lint Storybook [Storybook](https://storybook.js.org/docs/vue/get-started/introduction)
+
 ### This project is developed by
 
 - [ismail-Elg](https://github.com/Ismail-Elg)
