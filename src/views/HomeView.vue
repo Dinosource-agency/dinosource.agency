@@ -1,9 +1,11 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+import LinkComponent from "./../components/LinkComponent.vue";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <link-component to="/about" title="about" link-type="internal"
+      >jow</link-component
+    >
   </main>
 </template>
