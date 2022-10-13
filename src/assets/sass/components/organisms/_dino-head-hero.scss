@@ -1,0 +1,22 @@
+@use "../../vars";
+.o-dino-header-hero {
+  background-color: vars.$color-black;
+  &__text-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__text {
+      color: vars.$color-white;
+      margin: 0;
+      font-size: 12vw;
+    }
+  }
+  canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+}
