@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from "vue";
 defineProps({
   linkType: {
     type: String,
