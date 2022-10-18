@@ -1,0 +1,27 @@
+@use "../../vars";
+.o-permission-modal {
+  position: absolute;
+  z-index: 2000;
+  left: 50%;
+  top: 50%;
+  background-color: vars.$color-grey;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: vars.$border-radius;
+  width: 13rem; // 214px + 64px padding
+  &__title {
+    color: vars.$color-green;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  &__description {
+    color: vars.$color-muted;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  &__buttons{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

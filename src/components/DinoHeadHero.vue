@@ -1,4 +1,5 @@
 <template>
+  <permission-modal></permission-modal>
   <section class="o-dino-header-hero">
     <div class="o-dino-header-hero__text-wrapper">
       <p class="o-dino-header-hero__text-wrapper__text">READY FOR</p>
@@ -18,7 +19,7 @@
         <AmbientLight></AmbientLight>
         <GltfModel
           :rotation="{ y: 5.4 }"
-          :position="{ x: 0, y: -5, z: 0 }"
+          :position="{ x: 0.6, y: -5, z: 0 }"
           src="models/glftfDinoHeadNoComp.glb"
           @load="onReady"
         />
@@ -29,17 +30,37 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { Camera, GltfModel, AmbientLight, Renderer, Scene } from "troisjs";
+import PermissionModal from "@/components/PermissionModal.vue";
+import {
+  Camera,
+  GltfModel,
+  AmbientLight,
+  Renderer,
+  Scene,
+  DirectionalLight,
+} from "troisjs";
 import * as THREE from "three";
+import { isMobile } from "mobile-device-detect";
 
+//defining the refs
 const rendererC = ref();
 const sceneC = ref();
 const cameraC = ref();
 
+const modal = document.createElement("div");
+
+/*
+ * Loaders
+ */
+
 // texture loader
 const cubeTextureLoader = new THREE.CubeTextureLoader();
 
-// texture
+/*
+ * Textures
+ */
+
+// environment map
 const environmentMapTexture = cubeTextureLoader.load([
   "/environmentMaps/3/px.webp",
   "/environmentMaps/3/nx.webp",
@@ -65,9 +86,6 @@ const dinoMetalMaterial = new THREE.MeshStandardMaterial({
 const onReady = (model) => {
   model.scene.traverse((child) => {
     if (child.isMesh) {
-      // handle both multiple and single materials
-      Array.isArray(child.material) ? child.material : [child.material];
-
       /*
        * Applying the texture to the material
        */
@@ -78,18 +96,73 @@ const onReady = (model) => {
 onMounted(() => {
   const renderer = rendererC.value;
   const camera = cameraC.value;
+  //checking if the device is mobile
+  if (!isMobile) {
+    renderer.onBeforeRender(() => {
+      document.addEventListener("mousemove", (event) => {
+        //getting the mouse position where the axis is the center of the screen
+        const mouse = {
+          x: (event.clientX / window.innerWidth) * 2 - 1,
+          y: -(event.clientY / window.innerHeight) * 2 + 1,
+        };
 
-  renderer.onBeforeRender(() => {
-    document.addEventListener("mousemove", (event) => {
-      //getting the mouse position where the axis is the center of the screen
-      const mouse = {
-        x: (event.clientX / window.innerWidth) * 2 - 1,
-        y: -(event.clientY / window.innerHeight) * 2 + 1,
-      };
-
-      camera.camera.position.x = mouse.x * 20;
-      camera.camera.position.y = mouse.y * 20;
+        camera.camera.position.x = mouse.x * 20;
+        camera.camera.position.y = mouse.y * 20;
+      });
     });
-  });
+  } else {
+    if (
+      typeof DeviceOrientationEvent !== "undefined" &&
+      typeof DeviceOrientationEvent.requestPermission === "function"
+    ) {
+      //create modal to ask for permission
+      modal.style.position = "absolute";
+      modal.style.top = "0";
+      modal.style.left = "0";
+      modal.style.width = "100%";
+      modal.style.height = "100%";
+      modal.style.backgroundColor = "rgba(0,0,0,0.5)";
+      modal.style.zIndex = "9999";
+      modal.style.display = "flex";
+      modal.style.justifyContent = "center";
+      modal.style.alignItems = "center";
+      modal.style.flexDirection = "column";
+      modal.innerHTML = `
+        <h1 style="color: white; font-size: 2rem; text-align: center; margin-bottom: 1rem;">Please allow access to your device orientation</h1>
+        <button id="button" style="background: red; color: white; padding: 1rem; border: none; font-size: 1.5rem; cursor: pointer;">Allow</button>
+      `;
+
+      document.body.appendChild(modal);
+      const button = document.getElementById("button");
+      button.addEventListener("click", requestAccess);
+    } else {
+      // handle regular non iOS 13+ devices
+      window.addEventListener("deviceorientation", handleOrientation);
+    }
+  }
 });
+
+const requestAccess = () => {
+  DeviceOrientationEvent.requestPermission()
+    .then((response) => {
+      if (response == "granted") {
+        alert("granted");
+        modal.style.display = "none";
+        window.addEventListener("deviceorientation", handleOrientation);
+      }
+    })
+    .catch(console.error);
+};
+
+const handleOrientation = (e) => {
+  const renderer = rendererC.value;
+  const camera = cameraC.value;
+  renderer.onBeforeRender(() => {
+    const beta = e.beta;
+    const gamma = e.gamma;
+
+    camera.camera.position.x = gamma * 0.22;
+    camera.camera.position.y = (beta - 90) * 0.22;
+  });
+};
 </script>

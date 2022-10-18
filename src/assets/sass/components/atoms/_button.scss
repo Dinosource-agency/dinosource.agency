@@ -1,0 +1,21 @@
+@use "../../vars";
+.a-button {
+  padding: 1rem 1.5rem;
+  border-radius: vars.$border-radius;
+  border: none;
+  cursor: pointer;
+
+  &--allow {
+    background-color: vars.$color-green;
+    color: vars.$color-black;
+  }
+
+  &--allow:active {
+    background-color: vars.$color-green-hover;
+  }
+
+  &--deny {
+    background-color: transparent;
+    color: vars.$color-muted;
+  }
+}
