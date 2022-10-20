@@ -1,5 +1,9 @@
 <template>
-  <permission-modal></permission-modal>
+  <permission-modal
+    v-if="showPermissionModal"
+    @allow="requestAccess"
+    @cancel="rotateDinoHead"
+  ></permission-modal>
   <section class="o-dino-header-hero">
     <div class="o-dino-header-hero__text-wrapper">
       <p class="o-dino-header-hero__text-wrapper__text">READY FOR</p>
@@ -46,8 +50,7 @@ import { isMobile } from "mobile-device-detect";
 const rendererC = ref();
 const sceneC = ref();
 const cameraC = ref();
-
-const modal = document.createElement("div");
+const showPermissionModal = ref(false);
 
 /*
  * Loaders
@@ -115,26 +118,8 @@ onMounted(() => {
       typeof DeviceOrientationEvent !== "undefined" &&
       typeof DeviceOrientationEvent.requestPermission === "function"
     ) {
-      //create modal to ask for permission
-      modal.style.position = "absolute";
-      modal.style.top = "0";
-      modal.style.left = "0";
-      modal.style.width = "100%";
-      modal.style.height = "100%";
-      modal.style.backgroundColor = "rgba(0,0,0,0.5)";
-      modal.style.zIndex = "9999";
-      modal.style.display = "flex";
-      modal.style.justifyContent = "center";
-      modal.style.alignItems = "center";
-      modal.style.flexDirection = "column";
-      modal.innerHTML = `
-        <h1 style="color: white; font-size: 2rem; text-align: center; margin-bottom: 1rem;">Please allow access to your device orientation</h1>
-        <button id="button" style="background: red; color: white; padding: 1rem; border: none; font-size: 1.5rem; cursor: pointer;">Allow</button>
-      `;
-
-      document.body.appendChild(modal);
-      const button = document.getElementById("button");
-      button.addEventListener("click", requestAccess);
+      //show modal
+      showPermissionModal.value = true;
     } else {
       // handle regular non iOS 13+ devices
       window.addEventListener("deviceorientation", handleOrientation);
@@ -146,9 +131,16 @@ const requestAccess = () => {
   DeviceOrientationEvent.requestPermission()
     .then((response) => {
       if (response == "granted") {
-        alert("granted");
-        modal.style.display = "none";
+        //hide modal
+        showPermissionModal.value = false;
         window.addEventListener("deviceorientation", handleOrientation);
+        // saveToLocalStorage("granted");
+      } else {
+        //hide modal
+        showPermissionModal.value = false;
+        //rotate dino head
+        rotateDinoHead();
+        //saveToLocalStorage("cancelled");
       }
     })
     .catch(console.error);
@@ -165,4 +157,26 @@ const handleOrientation = (e) => {
     camera.camera.position.y = (beta - 90) * 0.22;
   });
 };
+
+const rotateDinoHead = () => {
+  // saveToLocalStorage(false);
+  const renderer = rendererC.value;
+  const camera = cameraC.value;
+  //hide modal
+  showPermissionModal.value = false;
+  renderer.onBeforeRender(() => {
+    //rotate camera in circle
+    camera.camera.position.x = Math.sin(Date.now() * 0.0005) * 20;
+  });
+};
+/*
+const saveToLocalStorage = (state) => {
+  state = JSON.stringify(state);
+  localStorage.setItem("permissionModal", state);
+};
+
+const getFromLocalStorage = () => {
+  const state = localStorage.getItem("permissionModal");
+  return JSON.parse(state);
+};*/
 </script>

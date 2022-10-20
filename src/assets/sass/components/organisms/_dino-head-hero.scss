@@ -1,6 +1,8 @@
 @use "../../vars";
+@use "../../base/typography";
 .o-dino-header-hero {
   background-color: vars.$color-black;
+  font-family: "Akira Expanded", sans-serif;
   &__text-wrapper {
     width: 100%;
     height: 100vh;
@@ -8,10 +10,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      justify-content: space-between;
+    }
     &__text {
       color: vars.$color-white;
       margin: 0;
       font-size: 12vw;
+
+      @media screen and (max-width: vars.$breakpoint-md) {
+        padding: 8rem 0;
+      }
     }
   }
   canvas {

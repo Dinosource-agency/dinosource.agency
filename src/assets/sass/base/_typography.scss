@@ -1,7 +1,15 @@
 @font-face {
   font-family: "VCR OSD Mono";
-  src: url("../../fonts/Accents - Pixel-Font/VCR_OSD_MONO.woff2"),
-    url("../../fonts/Accents - Pixel-Font/VCR_OSD_MONO.woff");
+  src: url("../../fonts/Accents - Pixel-Font/VCR_OSD_MONO.woff2") format("woff2"),
+    url("../../fonts/Accents - Pixel-Font/VCR_OSD_MONO.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Akira Expanded";
+  src: url("../../fonts/Titles - Akira/Akira_Expanded.woff2") format("woff2"),
+  url("../../fonts/Titles - Akira/Akira_Expanded.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,13 +20,7 @@
 
 @import "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto&display=swap";
 
-@font-face {
-  font-family: "Akira Expanded";
-  src: url("../../fonts/Titles - Akira/Akira_Expanded.woff2"),
-    url("../../fonts/Titles - Akira/Akira_Expanded.woff");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 html,
 body {
