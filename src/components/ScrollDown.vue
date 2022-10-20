@@ -8,4 +8,3 @@
     <span class="m-scroll-down__text">Scroll down</span>
   </div>
 </template>
-<script setup></script>

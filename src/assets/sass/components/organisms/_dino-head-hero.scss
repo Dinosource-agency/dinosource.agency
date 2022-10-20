@@ -28,4 +28,11 @@
     position: absolute;
     top: 0;
   }
+
+  &__scroll-down {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

@@ -29,7 +29,7 @@
         />
       </Scene>
     </Renderer>
-    <scroll-down></scroll-down>
+    <scroll-down class="o-dino-header-hero__scroll-down"></scroll-down>
   </section>
 </template>
 
