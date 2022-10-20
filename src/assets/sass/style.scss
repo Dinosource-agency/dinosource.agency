@@ -15,6 +15,11 @@
 @use "components/atoms/button";
 
 /*
+  Molecules
+*/
+@use "components/molecules/_scroll-down";
+
+/*
   Organisms
  */
 @use "components/organisms/dino-head-hero";

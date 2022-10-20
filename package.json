@@ -17,6 +17,7 @@
     "three": "^0.134.0",
     "troisjs": "^0.3.4",
     "vue": "^3.2.38",
+    "vue-feather-icons": "^5.1.0",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {

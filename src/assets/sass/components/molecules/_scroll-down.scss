@@ -1,0 +1,15 @@
+@use "../../vars";
+.m-scroll-down {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  &__icon {
+    background-color: vars.$color-green;
+    padding: 0.6rem;
+    border-radius: 100px;
+  }
+  &__text {
+    font-family: "DM Sans", "sans-serif";
+    color: vars.$color-white;
+  }
+}

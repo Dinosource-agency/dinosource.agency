@@ -29,12 +29,14 @@
         />
       </Scene>
     </Renderer>
+    <scroll-down></scroll-down>
   </section>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
 import PermissionModal from "@/components/PermissionModal.vue";
+import ScrollDown from "@/components/ScrollDown.vue";
 import {
   Camera,
   GltfModel,
