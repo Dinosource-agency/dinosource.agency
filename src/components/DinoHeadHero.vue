@@ -6,8 +6,16 @@
   ></permission-modal>
   <section class="o-dino-header-hero">
     <div class="o-dino-header-hero__text-wrapper">
-      <p class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--first">READY FOR</p>
-      <p class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--second">IMPACT</p>
+      <p
+        class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--first"
+      >
+        READY FOR
+      </p>
+      <p
+        class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--second"
+      >
+        IMPACT
+      </p>
     </div>
     <Renderer
       ref="rendererC"
