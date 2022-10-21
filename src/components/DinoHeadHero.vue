@@ -144,13 +144,11 @@ const requestAccess = () => {
         //hide modal
         showPermissionModal.value = false;
         window.addEventListener("deviceorientation", handleOrientation);
-        // saveToLocalStorage("granted");
       } else {
         //hide modal
         showPermissionModal.value = false;
         //rotate dino head
         rotateDinoHead();
-        //saveToLocalStorage("cancelled");
       }
     })
     .catch(console.error);
@@ -169,7 +167,6 @@ const handleOrientation = (e) => {
 };
 
 const rotateDinoHead = () => {
-  // saveToLocalStorage(false);
   const renderer = rendererC.value;
   const camera = cameraC.value;
   //hide modal
@@ -179,14 +176,4 @@ const rotateDinoHead = () => {
     camera.camera.position.x = Math.sin(Date.now() * 0.0005) * 20;
   });
 };
-/*
-const saveToLocalStorage = (state) => {
-  state = JSON.stringify(state);
-  localStorage.setItem("permissionModal", state);
-};
-
-const getFromLocalStorage = () => {
-  const state = localStorage.getItem("permissionModal");
-  return JSON.parse(state);
-};*/
 </script>
