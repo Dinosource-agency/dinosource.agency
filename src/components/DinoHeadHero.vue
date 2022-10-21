@@ -6,8 +6,8 @@
   ></permission-modal>
   <section class="o-dino-header-hero">
     <div class="o-dino-header-hero__text-wrapper">
-      <p class="o-dino-header-hero__text-wrapper__text">READY FOR</p>
-      <p class="o-dino-header-hero__text-wrapper__text">IMPACT</p>
+      <p class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--first">READY FOR</p>
+      <p class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--second">IMPACT</p>
     </div>
     <Renderer
       ref="rendererC"
@@ -132,7 +132,7 @@ onMounted(() => {
 const requestAccess = () => {
   DeviceOrientationEvent.requestPermission()
     .then((response) => {
-      if (response == "granted") {
+      if (response === "granted") {
         //hide modal
         showPermissionModal.value = false;
         window.addEventListener("deviceorientation", handleOrientation);

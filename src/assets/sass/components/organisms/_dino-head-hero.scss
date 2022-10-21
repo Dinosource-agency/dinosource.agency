@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    overflow: hidden;
     @media screen and (max-width: vars.$breakpoint-md) {
       justify-content: space-between;
     }
@@ -17,9 +17,15 @@
       color: vars.$color-white;
       margin: 0;
       font-size: 12vw;
-
-      @media screen and (max-width: vars.$breakpoint-md) {
-        padding: 8rem 0;
+      &--first {
+        @media screen and (max-width: vars.$breakpoint-md) {
+          margin-top: 8rem;
+        }
+      }
+      &--second {
+        @media screen and (max-width: vars.$breakpoint-md) {
+          margin-bottom: 8rem;
+        }
       }
     }
   }
