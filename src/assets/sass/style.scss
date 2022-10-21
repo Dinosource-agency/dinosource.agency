@@ -8,3 +8,19 @@
   Utilities
  */
 @use "utilities/layout";
+
+/*
+  Atoms
+*/
+@use "components/atoms/button";
+
+/*
+  Molecules
+*/
+@use "components/molecules/_scroll-down";
+
+/*
+  Organisms
+ */
+@use "components/organisms/dino-head-hero";
+@use "components/organisms/permission-modal";

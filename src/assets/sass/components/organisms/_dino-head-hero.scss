@@ -1,0 +1,44 @@
+@use "../../vars";
+.o-dino-header-hero {
+  background-color: vars.$color-black;
+  font-family: "Akira Expanded", sans-serif;
+  &__text-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    @media screen and (max-width: vars.$breakpoint-md) {
+      justify-content: space-between;
+    }
+    &__text {
+      color: vars.$color-white;
+      margin: 0;
+      font-size: 12vw;
+      &--first {
+        @media screen and (max-width: vars.$breakpoint-md) {
+          margin-top: 8rem;
+        }
+      }
+      &--second {
+        @media screen and (max-width: vars.$breakpoint-md) {
+          margin-bottom: 8rem;
+        }
+      }
+    }
+  }
+  canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  &__scroll-down {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

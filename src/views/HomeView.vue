@@ -1,11 +1,9 @@
 <script setup>
-import LinkComponent from "./../components/LinkComponent.vue";
+import DinoHeadHero from "./../components/DinoHeadHero.vue";
 </script>
 
 <template>
   <main>
-    <link-component to="/about" title="about" link-type="internal"
-      >jow</link-component
-    >
+    <dino-head-hero></dino-head-hero>
   </main>
 </template>
