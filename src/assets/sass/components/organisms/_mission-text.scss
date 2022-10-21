@@ -1,0 +1,27 @@
+@use "../../vars";
+.o-mission-text-component {
+  padding: 0;
+  margin: 0;
+  background-color: vars.$color-green;
+  font-family: "Akira Expanded", sans-serif;
+  text-align: center;
+  padding: 22vh 2vw;
+  @media screen and (max-width: vars.$breakpoint-md) {
+    padding: 10vh 1vw;
+  }
+  @media screen and (max-width: vars.$breakpoint-sm) {
+    padding: 15vh 0vw;
+  }
+  &__title {
+    color: vars.$color-black;
+    margin: 0;
+    padding: 0;
+    font-size: 5vw;
+    @media screen and (max-width: vars.$breakpoint-md) {
+      font-size: 8vw;
+    }
+    @media screen and (max-width: vars.$breakpoint-sm) {
+      font-size: 40px;
+    }
+  }
+}
