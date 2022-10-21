@@ -75,12 +75,12 @@ const cubeTextureLoader = new THREE.CubeTextureLoader();
 
 // environment map
 const environmentMapTexture = cubeTextureLoader.load([
-  "/environmentMaps/3/px.webp",
-  "/environmentMaps/3/nx.webp",
-  "/environmentMaps/3/py.webp",
-  "/environmentMaps/3/ny.webp",
-  "/environmentMaps/3/pz.webp",
-  "/environmentMaps/3/nz.webp",
+  "/environmentMaps/0/px.webp",
+  "/environmentMaps/0/nx.webp",
+  "/environmentMaps/0/py.webp",
+  "/environmentMaps/0/ny.webp",
+  "/environmentMaps/0/pz.webp",
+  "/environmentMaps/0/nz.webp",
 ]);
 
 /*
