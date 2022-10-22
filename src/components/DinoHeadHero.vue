@@ -119,8 +119,8 @@ onMounted(() => {
           y: -(event.clientY / window.innerHeight) * 2 + 1,
         };
 
-        camera.camera.position.x = mouse.x * 20;
-        camera.camera.position.y = mouse.y * 20;
+        camera.camera.position.x = -mouse.x * 20;
+        camera.camera.position.y = -mouse.y * 20;
       });
     });
   } else {

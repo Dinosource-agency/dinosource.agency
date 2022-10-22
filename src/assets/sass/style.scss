@@ -12,7 +12,9 @@
 /*
   Atoms
 */
+@use "components/atoms/link";
 @use "components/atoms/button";
+
 
 /*
   Molecules
@@ -24,3 +26,4 @@
  */
 @use "components/organisms/dino-head-hero";
 @use "components/organisms/permission-modal";
+@use "components/organisms/navigation";
