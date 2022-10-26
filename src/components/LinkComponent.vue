@@ -27,10 +27,11 @@ defineProps({
   </router-link>
   <!-- External link -->
   <a
+    v-else-if="linkType.toString() === 'external'"
     class="a-link"
+    target="_blank"
     :title="title"
     :href="to"
-    v-else-if="linkType === 'external'"
   >
     <slot></slot>
   </a>
@@ -40,6 +41,15 @@ defineProps({
     :title="title"
     :href="'mailto:' + to"
     v-else-if="linkType === 'email'"
+  >
+    <slot></slot>
+  </a>
+  <!-- Phone link -->
+  <a
+    class="a-link"
+    :title="title"
+    :href="'tel:' + to"
+    v-else-if="linkType === 'phone'"
   >
     <slot></slot>
   </a>

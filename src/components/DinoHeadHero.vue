@@ -20,7 +20,7 @@
     <Renderer
       ref="rendererC"
       antialias
-      :orbit-ctrl="{ enabled: false, enableDamping: true }"
+      :orbit-ctrl="{ enabled: false }"
       :alpha="true"
       resize="window"
       class="renderer"
@@ -135,6 +135,9 @@ onMounted(() => {
       window.addEventListener("deviceorientation", handleOrientation);
     }
   }
+
+  //capturing the canvas element and enabeling scroll for mobile
+  renderer.renderer.domElement.style.touchAction = "auto";
 });
 
 const requestAccess = () => {
