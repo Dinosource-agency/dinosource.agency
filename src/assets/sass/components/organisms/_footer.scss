@@ -2,7 +2,7 @@
 .o-footer {
   background-color: vars.$color-green;
 
- .u-layout-grid {
+  .u-layout-grid {
     grid-row-gap: 0;
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -13,10 +13,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 4rem;
-    @media screen and (max-width: vars.$breakpoint-sm){
+    @media screen and (max-width: vars.$breakpoint-sm) {
       grid-column: 1/5;
     }
-    @media screen and (max-width: vars.$breakpoint-md){
+    @media screen and (max-width: vars.$breakpoint-md) {
       margin-bottom: 3rem;
     }
     &__title {
@@ -24,7 +24,7 @@
       font-family: "Akira Expanded", "sans-serif";
       margin: 0 0 1.5rem;
 
-      @media screen and (max-width: vars.$breakpoint-md){
+      @media screen and (max-width: vars.$breakpoint-md) {
         margin: 0 0 1rem;
         font-size: 1.5rem;
       }
@@ -34,8 +34,8 @@
       color: black;
       font-size: 2rem;
 
-      @media screen and (max-width: vars.$breakpoint-md){
-      font-size: 1rem;
+      @media screen and (max-width: vars.$breakpoint-md) {
+        font-size: 1rem;
       }
     }
   }
@@ -46,7 +46,7 @@
     grid-column: 1/6;
     margin-bottom: 4rem;
 
-    @media screen and (max-width: vars.$breakpoint-sm){
+    @media screen and (max-width: vars.$breakpoint-sm) {
       grid-column: 1/5;
     }
 
@@ -54,7 +54,7 @@
       font-size: 2rem;
       font-family: "Akira Expanded", "sans-serif";
       margin: 0 0 1.5rem;
-      @media screen and (max-width: vars.$breakpoint-md){
+      @media screen and (max-width: vars.$breakpoint-md) {
         margin: 0 0 1rem;
         font-size: 1.5rem;
       }
@@ -62,7 +62,7 @@
     .a-link {
       color: black;
       font-size: 2rem;
-      @media screen and (max-width: vars.$breakpoint-md){
+      @media screen and (max-width: vars.$breakpoint-md) {
         font-size: 1rem;
       }
     }
@@ -74,21 +74,21 @@
     grid-column: 8/13;
     text-align: right;
 
-    img{
+    img {
       max-width: 100%;
     }
-    @media screen and (max-width: vars.$breakpoint-xl){
-      width: 21rem ;
+    @media screen and (max-width: vars.$breakpoint-xl) {
+      width: 21rem;
     }
 
-    @media screen and (max-width: vars.$breakpoint-md){
+    @media screen and (max-width: vars.$breakpoint-md) {
       grid-column: 1/9;
-      grid-row:1;
+      grid-row: 1;
       text-align: left;
       width: 15rem;
       margin-bottom: 3rem;
     }
-    @media screen and (max-width: vars.$breakpoint-sm){
+    @media screen and (max-width: vars.$breakpoint-sm) {
       grid-column: 1/5;
     }
   }
@@ -96,13 +96,12 @@
   &__bottom {
     grid-column: 1/13;
 
-    @media screen and (max-width: vars.$breakpoint-md){
+    @media screen and (max-width: vars.$breakpoint-md) {
       grid-column: 1/9;
     }
 
-    @media screen and (max-width: vars.$breakpoint-sm){
+    @media screen and (max-width: vars.$breakpoint-sm) {
       grid-column: 1/5;
     }
   }
 }
-
