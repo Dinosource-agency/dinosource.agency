@@ -3,10 +3,10 @@
     <div class="u-layout-grid">
       <div class="o-footer__contact">
         <h4 class="o-footer__contact__title">
-          {{ footerMock.contact.title.toLocaleUpperCase() }}
+          {{ contact.title.toLocaleUpperCase() }}
         </h4>
         <link-component
-          v-for="contact in footerMock.contact.links"
+          v-for="contact in contact.links"
           :key="contact.title"
           :title="contact.title"
           :to="contact.to"
@@ -15,9 +15,9 @@
         >
       </div>
       <div class="o-footer__socials">
-        <h4 class="o-footer__socials__title">{{ footerMock.socials.title }}</h4>
+        <h4 class="o-footer__socials__title">{{ socials.title }}</h4>
         <link-component
-          v-for="link in footerMock.socials.links"
+          v-for="link in socials.links"
           :key="link.title"
           :link-type="link.linkType"
           :title="link.title"
@@ -48,53 +48,12 @@
 
 <script setup>
 import LinkComponent from "@/components/LinkComponent.vue";
-
-const footerMock = {
+defineProps({
   contact: {
-    title: "CONTACT",
-    links: [
-      {
-        title: "hello@dinosource.be",
-        linkType: "email",
-        to: "hello@dinosource.be",
-      },
-      {
-        title: "+32 492 94 15 49",
-        linkType: "phone",
-        to: "+32 492 94 15 49",
-      },
-      {
-        title: "Thomas More Mechelen",
-        linkType: "external",
-        to: "https://www.thomasmore.be/",
-      },
-    ],
+    type: Object,
   },
   socials: {
-    title: "FIND US HERE",
-    links: [
-      {
-        title: "Instagram",
-        linkType: "external",
-        to: "https://www.instagram.com/dinosource.agency/",
-      },
-      {
-        title: "Tiktok",
-        linkType: "external",
-        to: "https://www.tiktok.com/@dinosource.agency",
-      },
-      {
-        title: "Facebook",
-        linkType: "external",
-        to: "https://www.facebook.com/dinosource.agency",
-      },
-
-      {
-        title: "LinkedIn",
-        linkType: "external",
-        to: "https://www.tiktok.com/@dinosource.agency",
-      },
-    ],
+    type: Object,
   },
-};
+});
 </script>
