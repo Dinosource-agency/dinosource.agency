@@ -5,6 +5,18 @@
   border: none;
   cursor: pointer;
 
+  &--primary {
+    color: vars.$color-black;
+    background-color: vars.$color-green;
+
+    &:hover {
+      background-color: vars.$color-green-hover;
+    }
+
+    &:active {
+      background-color: vars.$color-green-hover;
+    }
+  }
   &--allow {
     background-color: vars.$color-green;
     color: vars.$color-black;
