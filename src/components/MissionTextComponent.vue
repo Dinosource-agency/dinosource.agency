@@ -19,8 +19,8 @@ const cssVars = computed(() => {
       "--padding-type-md": "6rem 2rem",
       "--padding-type-sm": "6rem 1rem",
       "--padding-type-xs": "6rem 1rem",
-    }
-  } else{
+    };
+  } else {
     return {
       "--padding-type-xxl": "4.25rem 6rem",
       "--padding-type-xl": "4.25rem 6rem",
