@@ -1,0 +1,42 @@
+@use "../../vars";
+.o-project-showcase-component {
+  font-family: "Akira Expanded", sans-serif;
+  background-color: vars.$color-black;
+  height: 100vh;
+
+  position: relative;
+
+  .u-layout-grid {
+    grid-row-gap: 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  &__title {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28vw;
+  }
+  &__projects-wrapper {
+    z-index: 5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 200vw;
+    gap: 1.5rem;
+
+    &__project {
+      width: 20vw;
+      height: 20vw;
+      background-color: #00ff00;
+    }
+  }
+}
