@@ -1,9 +1,9 @@
 @use "../vars";
-.p-about-team{
+.p-about-team {
   background-color: vars.$color-black;
   color: vars.$color-white;
 
-  &__wrapper{
+  &__wrapper {
     grid-column: 1/13;
   }
 }
