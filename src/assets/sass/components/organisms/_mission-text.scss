@@ -1,7 +1,5 @@
 @use "../../vars";
 .o-mission-text-component {
-  padding: 0;
-  margin: 0;
   background-color: vars.$color-green;
   font-family: "Akira Expanded", sans-serif;
   text-align: center;
@@ -17,11 +15,6 @@
   }
   @media screen and (max-width: vars.$breakpoint-sm) {
     padding: var(--padding-type-sm);
-  }
-  .u-layout-grid {
-    grid-row-gap: 0;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
   &__wrapper {
     grid-column: 1/13;
