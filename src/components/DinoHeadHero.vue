@@ -20,7 +20,7 @@
     <Renderer
       ref="rendererC"
       antialias
-      :orbit-ctrl="{ enabled: false, enableDamping: true }"
+      :orbit-ctrl="{ enabled: false }"
       :alpha="true"
       resize="window"
       class="renderer"
@@ -119,8 +119,8 @@ onMounted(() => {
           y: -(event.clientY / window.innerHeight) * 2 + 1,
         };
 
-        camera.camera.position.x = mouse.x * 20;
-        camera.camera.position.y = mouse.y * 20;
+        camera.camera.position.x = -mouse.x * 20;
+        camera.camera.position.y = -mouse.y * 20;
       });
     });
   } else {
@@ -135,6 +135,9 @@ onMounted(() => {
       window.addEventListener("deviceorientation", handleOrientation);
     }
   }
+
+  //capturing the canvas element and enabeling scroll for mobile
+  renderer.renderer.domElement.style.touchAction = "auto";
 });
 
 const requestAccess = () => {

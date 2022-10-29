@@ -33,6 +33,7 @@
     display: block;
     position: absolute;
     top: 0;
+    touch-action: pan-y;
   }
 
   &__scroll-down {

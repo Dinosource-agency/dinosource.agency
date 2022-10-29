@@ -17,15 +17,40 @@ defineProps({
 
 <template>
   <!-- Internal link -->
-  <router-link :to="to" :title="title" v-if="linkType === 'internal'" exact>
+  <router-link
+    class="a-link"
+    :to="to"
+    :title="title"
+    v-if="linkType === 'internal'"
+  >
     <slot></slot>
   </router-link>
   <!-- External link -->
-  <a :title="title" :href="to" v-else-if="linkType === 'external'">
+  <a
+    v-else-if="linkType.toString() === 'external'"
+    class="a-link"
+    target="_blank"
+    :title="title"
+    :href="to"
+  >
     <slot></slot>
   </a>
   <!-- Email link -->
-  <a :title="title" :href="'mailto:' + to" v-else-if="linkType === 'email'">
+  <a
+    class="a-link"
+    :title="title"
+    :href="'mailto:' + to"
+    v-else-if="linkType === 'email'"
+  >
+    <slot></slot>
+  </a>
+  <!-- Phone link -->
+  <a
+    class="a-link"
+    :title="title"
+    :href="'tel:' + to"
+    v-else-if="linkType === 'phone'"
+  >
     <slot></slot>
   </a>
 </template>

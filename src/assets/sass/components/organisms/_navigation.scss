@@ -1,0 +1,87 @@
+@use "../../vars";
+.o-navigation {
+  grid-column: 1/13;
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+  }
+  &__logo {
+    &--desktop {
+      @media screen and (max-width: vars.$breakpoint-sm) {
+        display: none;
+      }
+    }
+    &--mobile {
+      display: none;
+      @media screen and (max-width: vars.$breakpoint-sm) {
+        display: block;
+      }
+    }
+  }
+  &__items {
+    .router-link-exact-active {
+      color: vars.$color-white;
+    }
+    display: flex;
+    gap: 1.5rem;
+    &__item {
+      color: vars.$color-muted;
+    }
+    &__item--primary {
+      color: vars.$color-black;
+    }
+    @media screen and (max-width: vars.$breakpoint-lg) {
+      display: none;
+    }
+  }
+  &__menu-button {
+    display: none;
+    @media screen and (max-width: vars.$breakpoint-lg) {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    background-color: vars.$color-black;
+    display: flex;
+    align-items: center;
+    font-family: "Akira Expanded", sans-serif;
+    @media screen and (min-width: vars.$breakpoint-lg) {
+      display: none;
+    }
+    &--open {
+      display: none;
+    }
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      &__item {
+        font-size: 4rem;
+        color: vars.$color-grey;
+        transition: 0.3s;
+        &:hover {
+          color: vars.$color-white;
+        }
+        &:active {
+          transition: 0s;
+          color: vars.$color-white;
+        }
+        @media screen and (max-width: vars.$breakpoint-sm) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
