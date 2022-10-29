@@ -1,7 +1,20 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script setup>
+import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
 
-<style></style>
+const AboutPageMock = {
+  team: {
+    title: "THESE ARE THE PEOPLE YOU NEED TO KNOW",
+  },
+};
+</script>
+<template>
+  <section class="p-about-team">
+    <div class="u-layout-grid">
+      <div class="p-about-team__wrapper">
+      <dynamic-heading-component heading-style="h2" heading-type="h2">{{
+        AboutPageMock.team.title
+      }}</dynamic-heading-component>
+      </div>
+    </div>
+  </section>
+</template>
