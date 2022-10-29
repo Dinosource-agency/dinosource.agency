@@ -8,8 +8,8 @@
 </template>
 <script setup>
 import { RouterView } from "vue-router";
-import NavigationComponent from "@/components/NavigationComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
+import NavigationComponent from "@/components/app/NavigationComponent.vue";
+import FooterComponent from "@/components/app/FooterComponent.vue";
 
 const footerMock = {
   contact: {

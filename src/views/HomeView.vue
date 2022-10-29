@@ -1,6 +1,6 @@
 <script setup>
-import DinoHeadHero from "@/components/DinoHeadHero.vue";
-import MissionTextComponent from "@/components/MissionTextComponent.vue";
+import DinoHeadHero from "@/components/layout/DinoHeadHero.vue";
+import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
 </script>
 
 <template>

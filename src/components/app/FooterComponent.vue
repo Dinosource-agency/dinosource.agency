@@ -47,7 +47,7 @@
 </template>
 
 <script setup>
-import LinkComponent from "@/components/LinkComponent.vue";
+import LinkComponent from "@/components/base/LinkComponent.vue";
 defineProps({
   contact: {
     type: Object,
