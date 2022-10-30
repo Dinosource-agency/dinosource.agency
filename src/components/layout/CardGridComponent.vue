@@ -1,3 +1,1 @@
-<script>
-
-</script>
+<script></script>
