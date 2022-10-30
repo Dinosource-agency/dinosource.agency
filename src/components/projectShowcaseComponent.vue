@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import linkComponent from "@/components/LinkComponent.vue";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
@@ -52,8 +51,9 @@ onMounted(() => {
         title="All Projects"
         to="/work"
         link-type="internal"
-        class="o-project-showcase-component__link">
-        ALL PROJECTS &nbsp; <img src="/images/icons/arrow-right.svg">
+        class="o-project-showcase-component__link"
+      >
+        ALL PROJECTS &nbsp; <img src="/images/icons/arrow-right.svg" />
       </link-component>
     </div>
     <span class="o-project-showcase-component__title">Work</span>
