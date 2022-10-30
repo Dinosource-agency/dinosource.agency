@@ -13,7 +13,11 @@ const props = defineProps({
 <template>
   <div class="o-pictorial-component">
     <div class="u-layout-grid">
-      <img class="o-pictorial-component__image" :src="props.image" :alt="props.alt" />
+      <img
+        class="o-pictorial-component__image"
+        :src="props.image"
+        :alt="props.alt"
+      />
     </div>
   </div>
 </template>
