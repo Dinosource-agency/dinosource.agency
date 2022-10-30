@@ -94,7 +94,9 @@ const AboutPageMock = {
           class="p-about-team__title"
           heading-style="h2"
           heading-type="h2"
-          >{{ AboutPageMock.team.title.toLocaleUpperCase() }}</dynamic-heading-component
+          >{{
+            AboutPageMock.team.title.toLocaleUpperCase()
+          }}</dynamic-heading-component
         >
         <div class="p-about-team__grid">
           <card-component
