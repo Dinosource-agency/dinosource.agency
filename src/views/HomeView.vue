@@ -1,6 +1,6 @@
 <script setup>
-import DinoHeadHero from "./../components/DinoHeadHero.vue";
-import ProjectShowcaseComponent from "../components/projectShowcaseComponent.vue";
+import DinoHeadHero from "@/components/DinoHeadHero.vue";
+import ProjectShowcaseComponent from "@/components/projectShowcaseComponent.vue";
 
 const homeMockData = {
   missionText: "palceholder",
