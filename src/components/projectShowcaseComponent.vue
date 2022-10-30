@@ -3,7 +3,7 @@ import { onMounted } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import linkComponent from "@/components/LinkComponent.vue";
-
+import projectShowcaseModel from "@/components/projectShowcaseModel.vue";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
@@ -19,33 +19,31 @@ onMounted(() => {
       end: () =>
         document.querySelector(
           ".o-project-showcase-component__projects-wrapper"
-        ).innerWidth * 150,
+        ).innerWidth * 175,
       scrub: true,
       pin: true,
       markers: true,
     },
   });
 });
+
+const props = defineProps({
+  projectShowcase: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 <template>
   <div class="o-project-showcase-component">
     <div class="u-layout-grid">
       <div class="o-project-showcase-component__projects-wrapper">
-        <div
-          class="o-project-showcase-component__projects-wrapper__project"
-        ></div>
-        <div
-          class="o-project-showcase-component__projects-wrapper__project"
-        ></div>
-        <div
-          class="o-project-showcase-component__projects-wrapper__project"
-        ></div>
-        <div
-          class="o-project-showcase-component__projects-wrapper__project"
-        ></div>
-        <div
-          class="o-project-showcase-component__projects-wrapper__project"
-        ></div>
+        <project-showcase-model
+          v-for="project in props.projectShowcase.projects"
+          :key="project.name"
+          :project="project"
+          :image="project.image"
+        ></project-showcase-model>
       </div>
       <link-component
         title="All Projects"
