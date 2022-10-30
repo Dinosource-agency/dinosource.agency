@@ -14,11 +14,13 @@
 */
 @use "components/atoms/link";
 @use "components/atoms/button";
+@use "components/atoms/tag";
 
 /*
   Molecules
 */
 @use "components/molecules/_scroll-down";
+@use "components/molecules/card";
 
 /*
   Organisms
@@ -28,6 +30,7 @@
 @use "components/organisms/mission-text";
 @use "components/organisms/navigation";
 @use "components/organisms/footer";
+
 
 /*
   Pages
