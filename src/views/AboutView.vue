@@ -101,7 +101,6 @@ const AboutPageMock = {
     :title="AboutPageMock.title"
   ></MissionTextComponent>
   <MissionTextComponent
-    class="p-about__header"
     size="medium"
     backgroundColor="black"
     heading-style="h2"
