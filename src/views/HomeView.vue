@@ -6,9 +6,13 @@ import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
 <template>
   <main>
     <dino-head-hero></dino-head-hero>
-    <mission-text-component
-      title="WE PRAY FOR GREAT DESIGN, AMAZING DEVELOPMENT AND MEME-TECHNO"
+    <MissionTextComponent
       size="big"
-    ></mission-text-component>
+      backgroundColor="green"
+      heading-style="h2"
+      heading-type="h2"
+      alignment="center"
+      title="WE PRAY FOR GREAT DESIGN, AMAZING DEVELOPMENT AND MEME-TECHNO"
+    ></MissionTextComponent>
   </main>
 </template>

@@ -55,7 +55,7 @@
 
     <nav
       class="o-navigation__mobile u-layout-grid"
-      v-bind:class="{ 'o-navigation__mobile--open': !mobileMenuOpen }"
+      :class="{ 'o-navigation__mobile--open': !mobileMenuOpen }"
     >
       <div class="o-navigation__mobile__items">
         <link-component
