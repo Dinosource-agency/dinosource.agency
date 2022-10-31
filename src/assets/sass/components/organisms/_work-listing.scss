@@ -1,69 +1,67 @@
 @use "../../vars";
-.work-listing{
-    background-color: vars.$color-black;
-    padding: 12.4rem 0rem 6.125rem 0rem;
+.work-listing {
+  background-color: vars.$color-black;
+  padding: 12.4rem 0rem 6.125rem 0rem;
+  grid-column: 1/13;
+  .u-layout-grid {
+    gap: 2rem;
+  }
+  &__item {
+    position: relative;
     grid-column: 1/13;
-    .u-layout-grid{
-        gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid vars.$color-grey;
+    padding-bottom: 1.5rem;
+    color: vars.$color-grey;
+    transition: 0.3s;
+    &__title {
+      font-size: 4rem;
+      font-family: "Akira Expanded", sans-serif;
+      mix-blend-mode: difference;
     }
-    &__item{
-        position: relative;
-        grid-column: 1/13;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid vars.$color-grey;
-        padding-bottom: 1.5rem;
-        color: vars.$color-grey;
-        transition: 0.3s;
-        &__title{
-            font-size: 4rem;
-            font-family: "Akira Expanded", sans-serif;
-            mix-blend-mode: difference;
-        }
-        &__tags{
-            font-size: 1.5rem;
-            mix-blend-mode: difference;
-        }
-        &__hover-reveal {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20rem;
-            height: 20rem;
-            opacity: 0;
-            pointer-events: none;
-            transform: translate(0, -400px);
-            transition: 0.2s ease-out;
-          }
-        &__hover-reveal__inner {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            will-change: transform;
-            overflow: hidden;
-          }
-        &__hover-reveal__img {
-            background-size: cover;
-            background-position: center;
-            transform-origin: 50% 100%;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            will-change: transform;
-            transform: scale(0.8);
-            transition: 1.5s transform;
-            &__image{
-                width: 100%;
-                height: 100%;
-            }
-          }
+    &__tags {
+      font-size: 1.5rem;
+      mix-blend-mode: difference;
     }
-    &__item:hover{
-        border-bottom: 1px solid vars.$color-green;
-        color: vars.$color-white;
-
+    &__hover-reveal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20rem;
+      height: 20rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(0, -400px);
+      transition: 0.2s ease-out;
     }
-  
+    &__hover-reveal__inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      will-change: transform;
+      overflow: hidden;
+    }
+    &__hover-reveal__img {
+      background-size: cover;
+      background-position: center;
+      transform-origin: 50% 100%;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      will-change: transform;
+      transform: scale(0.8);
+      transition: 1.5s transform;
+      &__image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__item:hover {
+    border-bottom: 1px solid vars.$color-green;
+    color: vars.$color-white;
+  }
 }
