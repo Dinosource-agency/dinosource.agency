@@ -1,6 +1,7 @@
 <script setup>
-import DinoHeadHero from "@/components/DinoHeadHero.vue";
-import ProjectShowcaseComponent from "@/components/projectShowcaseComponent.vue";
+import DinoHeadHero from "@/components/layout/DinoHeadHero.vue";
+import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
+import ProjectShowcaseComponent from "@/components/home/projectShowcaseComponent.vue";
 
 const homeMockData = {
   missionText: "palceholder",
@@ -33,8 +34,7 @@ const homeMockData = {
     ],
   },
 };
-import DinoHeadHero from "@/components/layout/DinoHeadHero.vue";
-import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
+
 </script>
 
 <template>

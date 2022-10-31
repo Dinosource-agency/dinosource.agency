@@ -1,5 +1,5 @@
 <script setup>
-import linkComponent from "@/components/LinkComponent.vue";
+import LinkComponent from "@/components/base/LinkComponent.vue";
 const props = defineProps({
   project: {
     type: Object,

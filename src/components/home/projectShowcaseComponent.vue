@@ -1,11 +1,11 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import linkComponent from "@/components/LinkComponent.vue";
-import projectShowcaseModel from "@/components/projectShowcaseModel.vue";
+import LinkComponent from "@/components/base/LinkComponent.vue";
+import projectShowcaseModel from "@/components/home/projectShowcaseModel.vue";
 gsap.registerPlugin(ScrollTrigger);
-
+const projectsWrapper = ref(null)
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -17,9 +17,7 @@ onMounted(() => {
       trigger: ".o-project-showcase-component",
       start: "top top",
       end: () =>
-        document.querySelector(
-          ".o-project-showcase-component__projects-wrapper"
-        ).innerWidth * 175,
+          projectsWrapper.value.innerWidth *175,
       scrub: true,
       pin: true,
       markers: true,
@@ -37,7 +35,7 @@ const props = defineProps({
 <template>
   <div class="o-project-showcase-component">
     <div class="u-layout-grid">
-      <div class="o-project-showcase-component__projects-wrapper">
+      <div ref="projectsWrapper" class="o-project-showcase-component__projects-wrapper">
         <project-showcase-model
           v-for="project in props.projectShowcase.projects"
           :key="project.name"
