@@ -1,6 +1,7 @@
 <script setup>
 import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
 import CardComponent from "@/components/layout/CardComponent.vue";
+import StatisticComponent from "@/components/layout/StatisticComponent.vue";
 const AboutPageMock = {
   team: {
     title: "THESE ARE THE PEOPLE YOU NEED TO KNOW",
@@ -84,11 +85,32 @@ const AboutPageMock = {
       },
     ],
   },
+  statistics: {
+    items: [
+      {
+        id: 1,
+        value: "4",
+        description: "Mentors guiding the path for the NPCs",
+      },
+      {
+        id: 2,
+        value: "12",
+        description: "generations of Designosource, 1st version of DinoSource",
+      },
+      {
+        id: 3,
+        value: "11",
+        description: "NPCs in our dinsource team",
+      },
+    ],
+  },
 };
 </script>
 <template>
   <section class="p-about-team">
     <div class="u-layout-grid">
+      <statistic-component :items="AboutPageMock.statistics.items">
+      </statistic-component>
       <div class="p-about-team__wrapper">
         <dynamic-heading-component
           class="p-about-team__title"
