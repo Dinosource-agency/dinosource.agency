@@ -5,11 +5,11 @@
   @media screen and (max-width: vars.$breakpoint-lg) {
     padding: 12rem 0rem;
   }
- 
+
   color: vars.$color-white;
   background-color: vars.$color-black;
 
-  .u-layout-grid{
+  .u-layout-grid {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

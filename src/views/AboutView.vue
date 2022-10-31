@@ -2,6 +2,7 @@
 import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
 import CardComponent from "@/components/layout/CardComponent.vue";
 import StatisticComponent from "@/components/layout/StatisticComponent.vue";
+import CTABanner from "@/components/layout/CTABanner.vue";
 const AboutPageMock = {
   team: {
     title: "THESE ARE THE PEOPLE YOU NEED TO KNOW",
@@ -104,13 +105,22 @@ const AboutPageMock = {
       },
     ],
   },
+  ctaBanner: {
+    title: "THINK YOU CAN HANDLE US?",
+    button: {
+      title: "Contact",
+      to: "contact",
+      linkType: "internal",
+    },
+    buttonText: "CONTACT",
+  },
 };
 </script>
 <template>
+  <statistic-component :items="AboutPageMock.statistics.items">
+  </statistic-component>
   <section class="p-about-team">
     <div class="u-layout-grid">
-      <statistic-component :items="AboutPageMock.statistics.items">
-      </statistic-component>
       <div class="p-about-team__wrapper">
         <dynamic-heading-component
           class="p-about-team__title"
@@ -134,4 +144,9 @@ const AboutPageMock = {
       </div>
     </div>
   </section>
+  <c-t-a-banner
+    :title="AboutPageMock.ctaBanner.title"
+    :button="AboutPageMock.ctaBanner.button"
+    :buttonText="AboutPageMock.ctaBanner.buttonText"
+  ></c-t-a-banner>
 </template>
