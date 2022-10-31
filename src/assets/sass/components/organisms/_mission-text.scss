@@ -1,0 +1,40 @@
+@use "../../vars";
+.o-mission-text-component {
+  &--black {
+    background-color: vars.$color-black;
+    color: vars.$color-white;
+  }
+  &--green {
+    background-color: vars.$color-green;
+    color: vars.$color-black;
+  }
+  font-family: "Akira Expanded", sans-serif;
+  text-align: center;
+  padding: var(--padding-type-xxl);
+  @media screen and (max-width: vars.$breakpoint-xl) {
+    padding: var(--padding-type-xl);
+  }
+  @media screen and (max-width: vars.$breakpoint-lg) {
+    padding: var(--padding-type-lg);
+  }
+  @media screen and (max-width: vars.$breakpoint-md) {
+    padding: var(--padding-type-md);
+  }
+  @media screen and (max-width: vars.$breakpoint-sm) {
+    padding: var(--padding-type-sm);
+  }
+  &__wrapper {
+    grid-column: 1/13;
+  }
+  &__title {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    &--center {
+      text-align: center;
+    }
+    &--left {
+      text-align: left;
+    }
+  }
+}

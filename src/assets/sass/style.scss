@@ -14,18 +14,26 @@
 */
 @use "components/atoms/link";
 @use "components/atoms/button";
+@use "components/atoms/tag";
 
 /*
   Molecules
 */
 @use "components/molecules/_scroll-down";
 @use "components/molecules/_project-showcase-model";
+@use "components/molecules/card";
 
 /*
   Organisms
  */
 @use "components/organisms/dino-head-hero";
 @use "components/organisms/permission-modal";
+@use "components/organisms/mission-text";
 @use "components/organisms/navigation";
 @use "components/organisms/footer";
 @use "components/organisms/project-showcase";
+
+/*
+  Pages
+ */
+@use "pages/about.scss";

@@ -55,7 +55,7 @@
 
     <nav
       class="o-navigation__mobile u-layout-grid"
-      v-bind:class="{ 'o-navigation__mobile--open': !mobileMenuOpen }"
+      :class="{ 'o-navigation__mobile--open': !mobileMenuOpen }"
     >
       <div class="o-navigation__mobile__items">
         <link-component
@@ -91,7 +91,7 @@
   </div>
 </template>
 <script setup>
-import LinkComponent from "@/components/LinkComponent.vue";
+import LinkComponent from "@/components/base/LinkComponent.vue";
 import { ref, watch } from "vue";
 import { useRoute } from "vue-router";
 let mobileMenuOpen = ref(false);
