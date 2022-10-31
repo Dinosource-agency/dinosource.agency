@@ -13,6 +13,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "gsap": "^3.11.3",
     "mobile-device-detect": "^0.4.3",
     "three": "^0.134.0",
     "troisjs": "^0.3.4",
