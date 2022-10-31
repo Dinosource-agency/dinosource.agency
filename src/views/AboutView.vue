@@ -1,7 +1,11 @@
 <script setup>
 import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
 import CardComponent from "@/components/layout/CardComponent.vue";
+import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
 const AboutPageMock = {
+  title: "MEET the npcs at DINOSOURCE V12",
+  about:
+    "ELEVEN CREATIVE CRACKHEADS THAT BUILD EXPLOSIVE EXPERIENCES FOR big league BRANDS.",
   team: {
     title: "THESE ARE THE PEOPLE YOU NEED TO KNOW",
     members: [
@@ -87,6 +91,23 @@ const AboutPageMock = {
 };
 </script>
 <template>
+  <MissionTextComponent
+    class="p-about__header"
+    size="medium"
+    backgroundColor="black"
+    heading-style="h1"
+    heading-type="h1"
+    alignment="center"
+    :title="AboutPageMock.title"
+  ></MissionTextComponent>
+  <MissionTextComponent
+    size="medium"
+    backgroundColor="black"
+    heading-style="h2"
+    heading-type="h2"
+    alignment="left"
+    :title="AboutPageMock.about"
+  ></MissionTextComponent>
   <section class="p-about-team">
     <div class="u-layout-grid">
       <div class="p-about-team__wrapper">
