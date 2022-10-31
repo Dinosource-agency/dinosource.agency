@@ -7,7 +7,9 @@ const props = defineProps({
 });
 </script>
 <template>
+  
   <div class="o-statistic-component">
+    <div class="u-layout-grid">
     <div
       class="o-statistic-component__wrapper"
       v-for="item in props.items"
@@ -21,6 +23,7 @@ const props = defineProps({
           item.description
         }}</span>
       </div>
+    </div>
     </div>
   </div>
 </template>
