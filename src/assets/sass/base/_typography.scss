@@ -1,3 +1,4 @@
+@use "../vars";
 @font-face {
   font-family: "VCR OSD Mono";
   src: url("../../fonts/Accents - Pixel-Font/VCR_OSD_MONO.woff2")
@@ -25,4 +26,77 @@ html,
 body {
   font-family: "DM Sans", sans-serif;
   line-height: 1.4;
+}
+
+.h1 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 6rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (max-width: vars.$breakpoint-xl) {
+    font-size: 5rem;
+  }
+  @media screen and (max-width: vars.$breakpoint-lg) {
+    font-size: 5rem;
+  }
+  @media screen and (max-width: vars.$breakpoint-md) {
+    font-size: 3.5rem;
+  }
+  @media screen and (max-width: vars.$breakpoint-sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.h2 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (max-width: vars.$breakpoint-lg) {
+    font-size: 3.5rem;
+  }
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: vars.$breakpoint-sm) {
+    font-size: 2rem;
+  }
+}
+
+.h3 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.h4 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.h5 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.h6 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
 }

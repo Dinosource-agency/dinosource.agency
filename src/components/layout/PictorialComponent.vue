@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   image: {
     type: String,
     required: true,
@@ -13,11 +13,7 @@ const props = defineProps({
 <template>
   <div class="o-pictorial-component">
     <div class="u-layout-grid">
-      <img
-        class="o-pictorial-component__image"
-        :src="props.image"
-        :alt="props.alt"
-      />
+      <img class="o-pictorial-component__image" :src="image" :alt="alt" />
     </div>
   </div>
 </template>
