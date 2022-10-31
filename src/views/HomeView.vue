@@ -34,7 +34,6 @@ const homeMockData = {
     ],
   },
 };
-
 </script>
 
 <template>
