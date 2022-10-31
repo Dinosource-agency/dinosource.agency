@@ -11,7 +11,7 @@ const props = defineProps({
     <div
       class="o-statistic-component__wrapper"
       v-for="item in props.items"
-      v-bind:key="props.items"
+      v-bind:key="item.id"
     >
       <div class="o-statistic-component__wrapper__item">
         <span class="o-statistic-component__wrapper__item__value">{{
