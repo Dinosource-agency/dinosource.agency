@@ -1,27 +1,47 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, onBeforeUnmount, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LinkComponent from "@/components/base/LinkComponent.vue";
 import ProjectShowcaseModel from "@/components/home/projectShowcaseModel.vue";
-
 const projectsWrapper = ref(null);
+
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
+  if (ScrollTrigger.getAll().length === 0) {
+    gsap.from(
+      projectsWrapper.value,
+      {
+        scrollTrigger: {
+          trigger: projectsWrapper.value,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        stagger: 0.2,
+      },
+      gsap.to(".o-project-showcase-component__projects-wrapper", {
+        xPercent: -117,
+        x: () => innerWidth,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: ".o-project-showcase-component",
+          end: () => projectsWrapper.value.innerWidth * 50,
+          scrub: true,
+          pin: true,
+          // markers: true,
+        },
+      })
+    );
+  }
+  ScrollTrigger.refresh();
+});
 
-  gsap.to(".o-project-showcase-component__projects-wrapper", {
-    xPercent: -117,
-    x: () => innerWidth,
-    ease: "power4.inOut",
-    scrollTrigger: {
-      trigger: ".o-project-showcase-component",
-      start: "top top",
-      end: () => projectsWrapper.value.innerWidth * 175,
-      scrub: true,
-      pin: true,
-      markers: true,
-    },
-  });
+onBeforeUnmount(() => {
+  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });
 
 const props = defineProps({
