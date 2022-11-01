@@ -39,9 +39,6 @@ const homeMockData = {
 <template>
   <main>
     <dino-head-hero></dino-head-hero>
-    <project-showcase-component
-      :projectShowcase="homeMockData.projectShowcase"
-    ></project-showcase-component>
     <MissionTextComponent
       size="big"
       backgroundColor="green"
@@ -50,5 +47,8 @@ const homeMockData = {
       alignment="center"
       title="WE PRAY FOR GREAT DESIGN, AMAZING DEVELOPMENT AND MEME-TECHNO"
     ></MissionTextComponent>
+    <project-showcase-component
+      :projectShowcase="homeMockData.projectShowcase"
+    ></project-showcase-component>
   </main>
 </template>

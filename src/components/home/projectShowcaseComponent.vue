@@ -3,8 +3,8 @@ import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LinkComponent from "@/components/base/LinkComponent.vue";
-import projectShowcaseModel from "@/components/home/projectShowcaseModel.vue";
-gsap.registerPlugin(ScrollTrigger);
+import ProjectShowcaseModel from "@/components/home/projectShowcaseModel.vue";
+
 const projectsWrapper = ref(null);
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);

@@ -1,0 +1,13 @@
+.o-pictorial-component {
+  background-color: black;
+  .u-layout-grid {
+    grid-row-gap: 0;
+    justify-content: center;
+    align-items: center;
+    .o-pictorial-component__image {
+      grid-column: 1/13;
+      grid-row: 1/13;
+      width: 100%;
+    }
+  }
+}

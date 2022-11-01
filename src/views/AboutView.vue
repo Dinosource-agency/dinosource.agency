@@ -2,7 +2,12 @@
 import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
 import CardComponent from "@/components/layout/CardComponent.vue";
 import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
+import PictorialComponent from "@/components/layout/PictorialComponent.vue";
 const AboutPageMock = {
+  pictorial: {
+    image: "/images/jpg/groepsfoto.jpg",
+    alt: "Group photo",
+  },
   title: "MEET the npcs at DINOSOURCE V12",
   about:
     "ELEVEN CREATIVE CRACKHEADS THAT BUILD EXPLOSIVE EXPERIENCES FOR big league BRANDS.",
@@ -100,6 +105,10 @@ const AboutPageMock = {
     alignment="center"
     :title="AboutPageMock.title"
   ></MissionTextComponent>
+  <pictorial-component
+    :image="AboutPageMock.pictorial.image"
+    :alt="AboutPageMock.pictorial.alt"
+  ></pictorial-component>
   <MissionTextComponent
     size="medium"
     backgroundColor="black"
