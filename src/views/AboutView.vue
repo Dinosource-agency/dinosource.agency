@@ -3,6 +3,7 @@ import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.v
 import CardComponent from "@/components/layout/CardComponent.vue";
 import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
 import PictorialComponent from "@/components/layout/PictorialComponent.vue";
+import ImageBannerComponent from "@/components/layout/ImageBannerComponent.vue";
 const AboutPageMock = {
   pictorial: {
     image: "/images/jpg/groepsfoto.jpg",
@@ -11,6 +12,14 @@ const AboutPageMock = {
   title: "MEET the npcs at DINOSOURCE V12",
   about:
     "ELEVEN CREATIVE CRACKHEADS THAT BUILD EXPLOSIVE EXPERIENCES FOR big league BRANDS.",
+  imageBanner: {
+    title: "We’re kinda like cocaine",
+    description:
+      "Not your basic-ass agency that says yes to every request. We see ourselves as the new kids on the block that want to bring a kick to your projects. Just like cocaine does to ravers.",
+    sideNote: "* Note that we fucking suck at drawing (and don’t do cocaine)",
+    image: "/images/jpg/dinoPresentation.webp",
+    alt: "picture of Lukas giving presentation",
+  },
   team: {
     title: "THESE ARE THE PEOPLE YOU NEED TO KNOW",
     members: [
@@ -96,7 +105,7 @@ const AboutPageMock = {
 };
 </script>
 <template>
-  <MissionTextComponent
+  <mission-text-component
     class="p-about__header"
     size="medium"
     backgroundColor="black"
@@ -104,19 +113,27 @@ const AboutPageMock = {
     heading-type="h1"
     alignment="center"
     :title="AboutPageMock.title"
-  ></MissionTextComponent>
+  ></mission-text-component>
   <pictorial-component
     :image="AboutPageMock.pictorial.image"
     :alt="AboutPageMock.pictorial.alt"
   ></pictorial-component>
-  <MissionTextComponent
+  <mission-text-component
     size="medium"
     backgroundColor="black"
     heading-style="h2"
     heading-type="h2"
     alignment="left"
     :title="AboutPageMock.about"
-  ></MissionTextComponent>
+  ></mission-text-component>
+  <image-banner-component
+    :title="AboutPageMock.imageBanner.title"
+    :description="AboutPageMock.imageBanner.description"
+    :side-note="AboutPageMock.imageBanner.sideNote"
+    :image="AboutPageMock.imageBanner.image"
+    :alt="AboutPageMock.imageBanner.alt"
+    :align-text-bottom="true"
+  ></image-banner-component>
   <section class="p-about-team">
     <div class="u-layout-grid">
       <div class="p-about-team__wrapper">

@@ -1,0 +1,15 @@
+.m-image {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  figcaption {
+    display: none;
+  }
+}
