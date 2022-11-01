@@ -20,7 +20,9 @@
   Molecules
 */
 @use "components/molecules/_scroll-down";
+@use "components/molecules/_project-showcase-model";
 @use "components/molecules/card";
+@use "components/molecules/image";
 
 /*
   Organisms
@@ -30,8 +32,11 @@
 @use "components/organisms/mission-text";
 @use "components/organisms/cta-banner";
 @use "components/organisms/statistic";
+@use "components/organisms/pictorial";
 @use "components/organisms/navigation";
 @use "components/organisms/footer";
+@use "components/organisms/project-showcase";
+@use "components/organisms/image-banner";
 
 /*
   Pages

@@ -34,6 +34,19 @@ body {
   line-height: 1.2;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: vars.$breakpoint-xl) {
+    font-size: 5rem;
+  }
+  @media screen and (max-width: vars.$breakpoint-lg) {
+    font-size: 4rem;
+  }
+  @media screen and (max-width: vars.$breakpoint-md) {
+    font-size: 3.5rem;
+  }
+  @media screen and (max-width: vars.$breakpoint-sm) {
+    font-size: 2rem;
+  }
 }
 
 .h2 {
@@ -43,16 +56,20 @@ body {
   margin: 0;
   padding: 0;
 
-  @media screen and (max-width: vars.$breakpoint-lg) {
+  @media screen and (max-width: vars.$breakpoint-xl) {
     font-size: 3.5rem;
   }
 
-  @media screen and (max-width: vars.$breakpoint-md) {
+  @media screen and (max-width: vars.$breakpoint-lg) {
     font-size: 3rem;
   }
 
+  @media screen and (max-width: vars.$breakpoint-md) {
+    font-size: 2.5rem;
+  }
+
   @media screen and (max-width: vars.$breakpoint-sm) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -62,6 +79,10 @@ body {
   line-height: 1.2;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: vars.$breakpoint-sm) {
+    font-size: 1.25rem;
+  }
 }
 
 .h4 {
