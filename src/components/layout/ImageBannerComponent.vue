@@ -31,7 +31,11 @@ defineProps({
         }}</dynamic-heading-component>
         <p>{{ description }}</p>
       </div>
-      <pictorial-component class="o-image-banner__image" :image="image" :alt="alt"></pictorial-component>
+      <pictorial-component
+        class="o-image-banner__image"
+        :image="image"
+        :alt="alt"
+      ></pictorial-component>
     </div>
   </section>
 </template>
