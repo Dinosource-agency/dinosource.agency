@@ -1,0 +1,25 @@
+@use "../../vars";
+.o-ctabanner-component {
+  grid-column: 1/13;
+  background-color: vars.$color-black;
+  color: vars.$color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-bottom: 12rem;
+  &__title {
+    font-size: 2rem;
+    max-width: 25rem;
+    text-align: center;
+    font-family: "Akira Expanded", "sans-serif";
+    @media screen and (max-width: vars.$breakpoint-sm) and (min-width: vars.$breakpoint-xs) {
+      font-size: 1.25rem;
+      max-width: 20.5rem;
+    }
+  }
+  &__button {
+    font-size: 1rem;
+  }
+}

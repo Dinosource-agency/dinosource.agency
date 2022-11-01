@@ -1,9 +1,12 @@
 <script setup>
 import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
 import CardComponent from "@/components/layout/CardComponent.vue";
+import StatisticComponent from "@/components/layout/StatisticComponent.vue";
+import CTABanner from "@/components/layout/CTABanner.vue";
 import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
 import PictorialComponent from "@/components/layout/PictorialComponent.vue";
 import ImageBannerComponent from "@/components/layout/ImageBannerComponent.vue";
+
 const AboutPageMock = {
   pictorial: {
     image: "/images/jpg/groepsfoto.jpg",
@@ -102,9 +105,38 @@ const AboutPageMock = {
       },
     ],
   },
+  statistics: {
+    items: [
+      {
+        id: 1,
+        value: "4",
+        description: "Mentors guiding the path for the NPCs",
+      },
+      {
+        id: 2,
+        value: "12",
+        description: "generations of Designosource, 1st version of DinoSource",
+      },
+      {
+        id: 3,
+        value: "11",
+        description: "NPCs in our dinsource team",
+      },
+    ],
+  },
+  ctaBanner: {
+    title: "THINK YOU CAN HANDLE US?",
+    button: {
+      title: "Contact",
+      to: "contact",
+      linkType: "internal",
+    },
+    buttonText: "CONTACT",
+  },
 };
 </script>
 <template>
+
   <mission-text-component
     class="p-about__header"
     size="medium"
@@ -134,6 +166,8 @@ const AboutPageMock = {
     :alt="AboutPageMock.imageBanner.alt"
     :align-text-bottom="true"
   ></image-banner-component>
+  <statistic-component :items="AboutPageMock.statistics.items">
+  </statistic-component>
   <section class="p-about-team">
     <div class="u-layout-grid">
       <div class="p-about-team__wrapper">
@@ -159,4 +193,9 @@ const AboutPageMock = {
       </div>
     </div>
   </section>
+  <c-t-a-banner
+    :title="AboutPageMock.ctaBanner.title"
+    :button="AboutPageMock.ctaBanner.button"
+    :buttonText="AboutPageMock.ctaBanner.buttonText"
+  ></c-t-a-banner>
 </template>
