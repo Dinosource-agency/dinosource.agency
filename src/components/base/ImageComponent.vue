@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <figure>
+  <figure class="m-image">
     <img :src="src" :alt="alt" />
     <figcaption>
       {{ alt }}

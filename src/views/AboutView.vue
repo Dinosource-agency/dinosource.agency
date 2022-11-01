@@ -15,7 +15,8 @@ const AboutPageMock = {
   imageBanner: {
     title: "We’re kinda like cocaine",
     description:
-      "Not your basic-ass agency that says yes to every request. We see ourselves as the new kids on the block that want to bring a kick to your projects. Just like cocaine does to ravers. * Note that we fucking suck at drawing (and don’t do cocaine)",
+      "Not your basic-ass agency that says yes to every request. We see ourselves as the new kids on the block that want to bring a kick to your projects. Just like cocaine does to ravers.",
+    sideNote: "* Note that we fucking suck at drawing (and don’t do cocaine)",
     image: "/images/jpg/dinoPresentation.webp",
     alt: "picture of Lukas giving presentation",
   },
@@ -128,8 +129,10 @@ const AboutPageMock = {
   <image-banner-component
     :title="AboutPageMock.imageBanner.title"
     :description="AboutPageMock.imageBanner.description"
+    :side-note="AboutPageMock.imageBanner.sideNote"
     :image="AboutPageMock.imageBanner.image"
     :alt="AboutPageMock.imageBanner.alt"
+    :align-text-bottom="true"
   ></image-banner-component>
   <section class="p-about-team">
     <div class="u-layout-grid">
