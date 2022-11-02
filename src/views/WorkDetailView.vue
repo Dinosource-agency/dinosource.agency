@@ -168,7 +168,10 @@ if (!project) {
   ></mission-text-component>
 
   <!-- quote block -->
-<quote-banner-component :quote="project.quoteBlock.quote" :description="project.quoteBlock.description"></quote-banner-component>
+  <quote-banner-component
+    :quote="project.quoteBlock.quote"
+    :description="project.quoteBlock.description"
+  ></quote-banner-component>
 
   <!-- big images -->
   <pictorial-component

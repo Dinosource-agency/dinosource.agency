@@ -36,6 +36,5 @@ defineProps({
       <span :key="tag" v-for="tag in cardTags" class="a-tag">{{ tag }}</span>
     </div>
     <span v-else-if="cardTag" class="a-tag">{{ cardTag }}</span>
-
   </div>
 </template>
