@@ -8,6 +8,8 @@ import {
   TopBarComponent,
   DynamicHeadingComponent,
   PictorialComponent,
+  CardComponent,
+  QuoteBannerComponent,
 } from "@/components";
 
 const WorkDetailMock = {
@@ -25,7 +27,7 @@ const WorkDetailMock = {
       id: 0,
       slug: "sweet-sixteen",
       tags: ["Design", "Development", "Branding", "Marketing"],
-      generation: 9,
+      generation: "9",
       title: "Sweet Sixteen",
       projectDescription:
         "One of the projects that involved the mentors of DesignoSource Generation 9 is One Woman Collective. Just like the name implies it’s a collective ran by one single woman named Linde Van Eijnde. She specialises in branding and creating immersive visual experiences which can be seen in all her projects.",
@@ -60,8 +62,10 @@ const WorkDetailMock = {
       ],
       team: [
         {
+          id: 1,
           personName: "Robbe",
           personPicture: "/images/team/robbe.webp",
+          personAlt: "Picture of robbe",
         },
       ],
     },
@@ -105,9 +109,9 @@ const projectName = route.params.projectName;
 const project = WorkDetailMock.projects.find(
   (project) => project.slug === projectName
 );
-console.log(project);
+
 if (!project) {
-  router.push({ name: "404" });
+  router.push({ name: "404View" });
 }
 </script>
 <template>
@@ -163,6 +167,9 @@ if (!project) {
     :title="project.bigText"
   ></mission-text-component>
 
+  <!-- quote block -->
+<quote-banner-component :quote="project.quoteBlock.quote" :description="project.quoteBlock.description"></quote-banner-component>
+
   <!-- big images -->
   <pictorial-component
     class="p-work-detail__bigImage"
@@ -171,32 +178,30 @@ if (!project) {
     :alt="image.alt"
     :image="image.image"
   ></pictorial-component>
-  <!--
-  <section class="p-work-detail-team">
-    <div class="u-layout-grid">
-      <div class="p-work-detail-team__wrapper">
+
+  <section class="p-work-detail__team">
+    <div class="u-layout-constrain">
+      <div class="p-work-detail__team__wrapper">
         <dynamic-heading-component
-          class="p-work-detail-team__title"
+          class="p-work-detail__team__title"
           heading-style="h2"
           heading-type="h2"
-          >{{
-            AboutPageMock.team.title.toLocaleUpperCase()
-          }}</dynamic-heading-component
+          >THE TEAM THAT MADE THIS HAPPEN</dynamic-heading-component
         >
-        <div class="p-work-detail-team__grid">
+        <div class="p-work-detail__team__grid">
           <card-component
-            v-for="member in AboutPageMock.team.members"
+            v-for="member in project.team"
             :key="member.id"
-            :image-src="member.imageSrc"
-            :image-alt="member.imageAlt"
-            :card-tags="member.name"
-            class="p-work-detail-team__grid__card"
+            :image-src="member.personPicture"
+            :image-alt="member.personAlt"
+            :card-tag="member.personName"
+            class="p-work-detail__team__grid__card"
           >
           </card-component>
         </div>
       </div>
     </div>
-  </section>-->
+  </section>
 
   <!-- Cta banner -->
   <c-t-a-banner

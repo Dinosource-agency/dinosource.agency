@@ -16,6 +16,9 @@ defineProps({
   cardTags: {
     type: Array,
   },
+  cardTag: {
+    type: String,
+  },
 });
 </script>
 
@@ -29,6 +32,10 @@ defineProps({
     >
       {{ cardTitle }}
     </dynamic-heading-component>
-    <span :key="tag" v-for="tag in cardTags" class="a-tag">{{ tag }}</span>
+    <div v-if="cardTags">
+      <span :key="tag" v-for="tag in cardTags" class="a-tag">{{ tag }}</span>
+    </div>
+    <span v-else-if="cardTag" class="a-tag">{{ cardTag }}</span>
+
   </div>
 </template>

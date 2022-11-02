@@ -15,6 +15,8 @@ export { default as ScrollDown } from "./btn/ScrollDown.vue";
 export { default as PermissionModal } from "./modal/PermissionModal.vue";
 
 export { default as TopBarComponent } from "./work-detail/TopBarComponent.vue";
+export { default as QuoteComponent } from "./base/QuoteComponent.vue";
+export { default as QuoteBannerComponent } from "./work-detail/QuoteBannerComponent.vue";
 
 export { default as DynamicHeadingComponent } from "./base/DynamicHeadingComponent.vue";
 export { default as ImageComponent } from "./base/ImageComponent.vue";
