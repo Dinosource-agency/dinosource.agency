@@ -162,7 +162,13 @@ if (!project) {
   ></mission-text-component>
 
   <!-- big images -->
-  <pictorial-component class="p-work-detail__bigImage" :key="image.id" v-for="image in project.projectImages" :alt="image.alt" :image="image.image"></pictorial-component>
+  <pictorial-component
+    class="p-work-detail__bigImage"
+    :key="image.id"
+    v-for="image in project.projectImages"
+    :alt="image.alt"
+    :image="image.image"
+  ></pictorial-component>
 
   <!-- Cta banner -->
   <c-t-a-banner
