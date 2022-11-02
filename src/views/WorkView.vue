@@ -1,5 +1,5 @@
 <script setup>
-import WorkListing from "@/components/layout/WorkListing.vue";
+import WorkListing from "@/components/work/WorkListing.vue";
 const workMockData = {
   projects: [
     {
