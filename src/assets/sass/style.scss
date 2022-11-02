@@ -23,6 +23,7 @@
 @use "components/molecules/_project-showcase-model";
 @use "components/molecules/card";
 @use "components/molecules/image";
+@use "components/molecules/top-bar";
 
 /*
   Organisms
@@ -42,3 +43,4 @@
   Pages
  */
 @use "pages/about.scss";
+@use "pages/work-detail";

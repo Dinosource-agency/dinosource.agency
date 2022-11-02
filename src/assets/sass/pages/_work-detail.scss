@@ -1,0 +1,7 @@
+@use "../vars";
+.p-work-detail {
+  &__top-bar {
+    margin-top: 12rem;
+    background-color: vars.$color-black;
+  }
+}

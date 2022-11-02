@@ -1,14 +1,19 @@
 <script setup>
 import LinkComponent from "@/components/base/LinkComponent.vue";
 //get ctaBanner object from AboutPageMock
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     required: true,
   },
-  button: {
-    type: Object,
-    required: true,
+  to: {
+    type: String,
+  },
+  label: {
+    type: String,
+  },
+  linkType: {
+    type: String,
   },
   buttonText: {
     type: String,
@@ -18,17 +23,17 @@ const props = defineProps({
 </script>
 <template>
   <div class="o-ctabanner-component">
-    <span class="o-ctabanner-component__title">{{ props.title }}</span>
+    <span class="o-ctabanner-component__title">{{ title }}</span>
     <link-component
-      :title="props.button.title"
-      :to="props.button.to"
-      :link-type="props.button.linkType"
+      :title="label"
+      :to="to"
+      :link-type="linkType"
       class="o-ctabanner-component__button"
     >
       <button
         class="a-button a-button--primary o-navigation__items__item--primary"
       >
-        {{ props.buttonText }}
+        {{ buttonText.toUpperCase() }}
       </button>
     </link-component>
   </div>

@@ -8,11 +8,9 @@ const props = defineProps({
   },
   size: {
     type: String,
-    required: true,
   },
   backgroundColor: {
     type: String,
-    required: true,
   },
   headingType: {
     type: String,

@@ -23,7 +23,7 @@
     }
 
     &--right {
-      grid-column: 7/13;
+      grid-column: 8/13;
     }
     &--align-bottom {
       margin-top: auto;
@@ -62,7 +62,7 @@
       }
     }
     &--left {
-      grid-column: 1/7;
+      grid-column: 1/8;
       grid-row: 1;
       @media screen and (max-width: vars.$breakpoint-lg) {
         grid-column: 1/13;
