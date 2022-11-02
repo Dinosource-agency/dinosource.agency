@@ -5,6 +5,8 @@ import CTABanner from "@/components/layout/CTABanner.vue";
 import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
 import ImageBannerComponent from "@/components/layout/ImageBannerComponent.vue";
 import TopBarComponent from "@/components/work-detail/TopBarComponent.vue";
+import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
+import PictorialComponent from "@/components/layout/PictorialComponent.vue";
 
 const WorkDetailMock = {
   ctaBanner: {
@@ -44,28 +46,14 @@ const WorkDetailMock = {
       },
       projectImages: [
         {
-          image: "Project Image 1",
-          alt: "Project Image 1 Alt",
+          id: 1,
+          image: "/images/cases/sweet16/Sweet16_InstagramPosts.webp",
+          alt: "Picture of Instagram mockups in sweet 16 branding",
         },
         {
-          image: "Project Image 2",
-          alt: "Project Image 2 Alt",
-        },
-        {
-          image: "Project Image 3",
-          alt: "Project Image 3 Alt",
-        },
-        {
-          image: "Project Image 4",
-          alt: "Project Image 4 Alt",
-        },
-        {
-          image: "Project Image 5",
-          alt: "Project Image 5 Alt",
-        },
-        {
-          image: "Project Image 6",
-          alt: "Project Image 6 Alt",
+          id: 2,
+          image: "/images/cases/sweet16/Sweet16_Macbook.webp",
+          alt: "Picture of Macbook mockup in sweet 16 branding",
         },
       ],
       team: [
@@ -121,6 +109,7 @@ if (!project) {
 }
 </script>
 <template>
+  <!-- top-bar component -->
   <section class="p-work-detail__top-bar">
     <div class="u-layout-constrain">
       <top-bar-component
@@ -129,33 +118,55 @@ if (!project) {
       ></top-bar-component>
     </div>
   </section>
-  <mission-text-component
-    heading-style="h1"
-    heading-type="h1"
-    background-color="black"
-    size="big"
-    :title="project.title"
-  ></mission-text-component>
+
+  <!-- Title -->
+  <section v-if="project.title">
+    <div class="u-layout-constrain">
+      <dynamic-heading-component
+        heading-style="h1"
+        heading-type="h1"
+        class="p-work-detail__title"
+        >{{ project.title }}</dynamic-heading-component
+      >
+    </div>
+  </section>
+
+  <!-- logo banner -->
   <image-banner-component
+    v-if="project.logo"
     :description="project.projectDescription"
     :image="project.logo"
     :alt="project.alt"
+    class="p-work-detail__logo-banner"
   ></image-banner-component>
+
+  <!-- image banner -->
   <image-banner-component
+    v-if="project.imageBanner"
     :title="project.imageBanner.title"
     :description="project.imageBanner.description"
     :image="project.imageBanner.image"
     :alt="project.imageBanner.alt"
     :image-left="true"
     :align-text-bottom="true"
+    class="p-work-detail__image-banner"
   ></image-banner-component>
+
+  <!-- tag line -->
   <mission-text-component
+    v-if="project.bigText"
     alignment="center"
     heading-style="h2"
-    heading-type="h1"
+    heading-type="h2"
     :title="project.bigText"
   ></mission-text-component>
+
+  <!-- big images -->
+  <pictorial-component class="p-work-detail__bigImage" :key="image.id" v-for="image in project.projectImages" :alt="image.alt" :image="image.image"></pictorial-component>
+
+  <!-- Cta banner -->
   <c-t-a-banner
+    v-if="WorkDetailMock.ctaBanner"
     :to="WorkDetailMock.ctaBanner.button.to"
     :label="WorkDetailMock.ctaBanner.button.title"
     :link-type="WorkDetailMock.ctaBanner.button.linkType"

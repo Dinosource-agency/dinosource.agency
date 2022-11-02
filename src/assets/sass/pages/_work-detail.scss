@@ -4,4 +4,22 @@
     margin-top: 12rem;
     background-color: vars.$color-black;
   }
+  &__title {
+    color: vars.$color-white;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__logo-banner {
+    padding-top: 0;
+    padding-bottom: 6rem;
+  }
+
+  &__image-banner{
+    padding-bottom: 6rem;
+  }
+  &__bigImage{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
