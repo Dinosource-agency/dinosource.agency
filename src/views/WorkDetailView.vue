@@ -1,12 +1,14 @@
 <script setup>
 import { useRoute } from "vue-router";
 import router from "@/router";
-import CTABanner from "@/components/layout/CTABanner.vue";
-import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
-import ImageBannerComponent from "@/components/layout/ImageBannerComponent.vue";
-import TopBarComponent from "@/components/work-detail/TopBarComponent.vue";
-import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
-import PictorialComponent from "@/components/layout/PictorialComponent.vue";
+import {
+  CTABanner,
+  MissionTextComponent,
+  ImageBannerComponent,
+  TopBarComponent,
+  DynamicHeadingComponent,
+  PictorialComponent,
+} from "@/components";
 
 const WorkDetailMock = {
   ctaBanner: {
@@ -169,6 +171,32 @@ if (!project) {
     :alt="image.alt"
     :image="image.image"
   ></pictorial-component>
+  <!--
+  <section class="p-work-detail-team">
+    <div class="u-layout-grid">
+      <div class="p-work-detail-team__wrapper">
+        <dynamic-heading-component
+          class="p-work-detail-team__title"
+          heading-style="h2"
+          heading-type="h2"
+          >{{
+            AboutPageMock.team.title.toLocaleUpperCase()
+          }}</dynamic-heading-component
+        >
+        <div class="p-work-detail-team__grid">
+          <card-component
+            v-for="member in AboutPageMock.team.members"
+            :key="member.id"
+            :image-src="member.imageSrc"
+            :image-alt="member.imageAlt"
+            :card-tags="member.name"
+            class="p-work-detail-team__grid__card"
+          >
+          </card-component>
+        </div>
+      </div>
+    </div>
+  </section>-->
 
   <!-- Cta banner -->
   <c-t-a-banner
