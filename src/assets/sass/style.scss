@@ -23,6 +23,9 @@
 @use "components/molecules/_project-showcase-model";
 @use "components/molecules/card";
 @use "components/molecules/image";
+@use "components/molecules/top-bar";
+@use "components/molecules/quote";
+@use "components/molecules/video";
 
 /*
   Organisms
@@ -37,8 +40,9 @@
 @use "components/organisms/footer";
 @use "components/organisms/project-showcase";
 @use "components/organisms/image-banner";
-
+@use "components/organisms/quote-banner";
 /*
   Pages
  */
 @use "pages/about.scss";
+@use "pages/work-detail";
