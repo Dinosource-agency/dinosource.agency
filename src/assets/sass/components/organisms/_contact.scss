@@ -1,0 +1,96 @@
+@use "../../vars";
+.contact-component {
+  padding: 12.31rem 0 6rem 0;
+  background-color: vars.$color-black;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  &__wrapper {
+    grid-column: 1/13;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+      max-width: 51.5rem;
+      font-family: "Akira Expanded", sans-serif;
+      font-size: 6rem;
+      line-height: 1.2;
+
+      color: vars.$color-white;
+    }
+
+    &__animation {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 20rem;
+      height: 20rem;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 50%;
+      &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20rem;
+        height: 20rem;
+        z-index: 0;
+        border-radius: 50%;
+      }
+      &__caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16rem;
+        height: 16rem;
+        margin: 2rem;
+        animation: rotate 5s ease-in-out infinite;
+        z-index: 0;
+        border-radius: 50%;
+      }
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__image-container {
+    user-select: none;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    &__image {
+      position: absolute;
+      width: 20rem;
+      width: 20rem;
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__one {
+      z-index: 6;
+    }
+    &__two {
+      z-index: 7;
+    }
+    &__three {
+      z-index: 8;
+    }
+  }
+}
+.pictorial-component--contact {
+  padding-bottom: 6rem;
+}
