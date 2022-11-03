@@ -1,0 +1,31 @@
+@use "../../vars";
+.m-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    &__tag {
+      margin: 0;
+    }
+  }
+  &__generation {
+    color: vars.$color-muted;
+    font-size: 1.5rem;
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      margin-top: 3rem;
+    }
+
+    @media screen and (max-width: vars.$breakpoint-sm) {
+      font-size: 1rem;
+    }
+  }
+}

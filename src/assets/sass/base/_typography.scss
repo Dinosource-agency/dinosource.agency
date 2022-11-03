@@ -108,3 +108,19 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.quote {
+  font-size: 3rem;
+
+  @media screen and (max-width: vars.$breakpoint-xl) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: vars.$breakpoint-lg) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: vars.$breakpoint-sm) {
+    font-size: 1.5rem;
+  }
+}

@@ -193,8 +193,10 @@ const AboutPageMock = {
     </div>
   </section>
   <c-t-a-banner
+    :to="AboutPageMock.ctaBanner.button.to"
+    :label="AboutPageMock.ctaBanner.button.title"
+    :link-type="AboutPageMock.ctaBanner.button.linkType"
     :title="AboutPageMock.ctaBanner.title"
-    :button="AboutPageMock.ctaBanner.button"
     :buttonText="AboutPageMock.ctaBanner.buttonText"
   ></c-t-a-banner>
 </template>

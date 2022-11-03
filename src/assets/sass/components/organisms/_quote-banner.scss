@@ -1,0 +1,28 @@
+@use "../../vars";
+.o-quote-banner {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  &__quote {
+    color: vars.$color-white;
+    grid-column: 1/7;
+    line-height: vars.$line-height;
+    @media screen and (max-width: vars.$breakpoint-md) {
+      grid-column: 1/9;
+      grid-row: 1;
+    }
+  }
+  &__description {
+    color: vars.$color-muted;
+    grid-column: 7/13;
+    font-size: 1.5rem;
+    margin: 0;
+    @media screen and (max-width: vars.$breakpoint-md) {
+      grid-column: 1/9;
+      grid-row: 2;
+    }
+
+    @media screen and (max-width: vars.$breakpoint-sm) {
+      font-size: 1rem;
+    }
+  }
+}
