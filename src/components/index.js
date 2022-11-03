@@ -21,6 +21,7 @@ export { default as QuoteBannerComponent } from "./work-detail/QuoteBannerCompon
 export { default as DynamicHeadingComponent } from "./base/DynamicHeadingComponent.vue";
 export { default as ImageComponent } from "./base/ImageComponent.vue";
 export { default as LinkComponent } from "./base/LinkComponent.vue";
+export { default as VideoComponent } from "./base/VideoComponent.vue";
 
 export { default as FooterComponent } from "./app/FooterComponent.vue";
 export { default as NavigationComponent } from "./app/NavigationComponent.vue";

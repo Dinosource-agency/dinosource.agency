@@ -1,2 +1,7 @@
 <script setup></script>
-<template>404 page</template>
+<template><p>404 page</p></template>
+<style scoped>
+p {
+  color: red;
+}
+</style>
