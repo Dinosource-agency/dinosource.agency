@@ -16,11 +16,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     @media screen and (max-width: vars.$breakpoint-md) {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 3rem;
-      }
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+    }
     &__title {
       max-width: 45rem;
       font-family: "Akira Expanded", sans-serif;
@@ -31,13 +31,9 @@
         font-size: 4rem;
         max-width: 35rem;
       }
- 
-     
     }
 
     &__animation {
-     
-      
       position: relative;
       top: 0;
       left: 0;
@@ -50,10 +46,10 @@
         width: 16rem;
         height: 16rem;
       }
-        @media screen and (max-width: vars.$breakpoint-md) {
-            width: 20rem;
-            height: 20rem;
-        }
+      @media screen and (max-width: vars.$breakpoint-md) {
+        width: 20rem;
+        height: 20rem;
+      }
       &__image {
         position: absolute;
         top: 0;
@@ -63,12 +59,12 @@
         z-index: 0;
         border-radius: 50%;
         @media screen and (max-width: vars.$breakpoint-lg) {
-            width: 16rem;
-            height: 16rem;
-          }
-          @media screen and (max-width: vars.$breakpoint-md) {
-            width: 20rem;
-            height: 20rem;
+          width: 16rem;
+          height: 16rem;
+        }
+        @media screen and (max-width: vars.$breakpoint-md) {
+          width: 20rem;
+          height: 20rem;
         }
       }
       &__caption {
@@ -82,14 +78,14 @@
         z-index: 0;
         border-radius: 50%;
         @media screen and (max-width: vars.$breakpoint-lg) {
-            width: 14rem;
-            height: 14rem;
-            margin: 1rem;
+          width: 14rem;
+          height: 14rem;
+          margin: 1rem;
         }
         @media screen and (max-width: vars.$breakpoint-md) {
-            width: 16rem;
-            height: 16rem;
-            margin: 2rem;
+          width: 16rem;
+          height: 16rem;
+          margin: 2rem;
         }
       }
     }
@@ -133,29 +129,28 @@
     }
   }
 
-  &__info{
- 
+  &__info {
     grid-column: 1/13;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    &__item{
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        max-width: 22rem;
-        &__title{
-            font-size: 1.5rem;
-            color: vars.$color-muted;
-            @media screen and (max-width: vars.$breakpoint-lg) {
-                font-size: 1.75rem;
-              }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 22rem;
+      &__title {
+        font-size: 1.5rem;
+        color: vars.$color-muted;
+        @media screen and (max-width: vars.$breakpoint-lg) {
+          font-size: 1.75rem;
         }
-        &__description{
-            font-size: 2rem;
-            color: vars.$color-white;
-        }
+      }
+      &__description {
+        font-size: 2rem;
+        color: vars.$color-white;
+      }
     }
   }
 }

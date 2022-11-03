@@ -2,16 +2,15 @@
 import LinkComponent from "@/components/base/LinkComponent.vue";
 import { onMounted, ref } from "vue";
 
-
 const props = defineProps({
   title: {
     type: String,
     required: true,
   },
   items: {
-        type: Object,
-        required: true,
-  }, 
+    type: Object,
+    required: true,
+  },
 });
 
 const contactImages = ref(null);
@@ -59,7 +58,7 @@ onMounted(() => {
   <div class="contact-component">
     <div class="u-layout-grid">
       <div class="contact-component__wrapper">
-        <span class="contact-component__wrapper__title">{{props.title}}</span>
+        <span class="contact-component__wrapper__title">{{ props.title }}</span>
         <div ref="ready" class="contact-component__wrapper__animation">
           <img
             src="images/svg/hover-over.webp"
@@ -74,23 +73,31 @@ onMounted(() => {
       </div>
       <div class="contact-component__info">
         <div class="contact-component__info__item">
-            <span class="contact-component__info__item__title">For the writers:</span>
-            <link-component
-        title="All Projects"
-        to="/work"
-        link-type="internal"
-        class="contact-component__info__item__description">
-        {{props.items.email}}
-       </link-component>
+          <span class="contact-component__info__item__title"
+            >For the writers:</span
+          >
+          <link-component
+            title="All Projects"
+            to="/work"
+            link-type="internal"
+            class="contact-component__info__item__description"
+          >
+            {{ props.items.email }}
+          </link-component>
         </div>
         <div class="contact-component__info__item">
-            <span class="contact-component__info__item__title">For the speakers:</span>
-            <span class="contact-component__info__item__description"> {{props.items.phone}}</span>
+          <span class="contact-component__info__item__title"
+            >For the speakers:</span
+          >
+          <span class="contact-component__info__item__description">
+            {{ props.items.phone }}</span
+          >
         </div>
         <div class="contact-component__info__item">
-
-            <span class="contact-component__info__item__title">Find us at</span>
-            <span class="contact-component__info__item__description">{{props.items.adress}}<br>{{props.items.campus}}</span>
+          <span class="contact-component__info__item__title">Find us at</span>
+          <span class="contact-component__info__item__description"
+            >{{ props.items.adress }}<br />{{ props.items.campus }}</span
+          >
         </div>
       </div>
     </div>
