@@ -153,9 +153,9 @@
           font-size: 1.25rem;
         }
       }
-      &__description {
+      .a-link {
         font-size: 2rem;
-        color: vars.$color-white;
+        color: vars.$color-white !important;
         @media screen and (max-width: vars.$breakpoint-lg) {
           font-size: 1.75rem;
         }

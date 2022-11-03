@@ -5,10 +5,26 @@ const ContactPageMock = {
   contactInfo: {
     title: "looking for this?",
     items: {
-      email: "hello@dinosource.agency",
-      phone: "+32 492 94 15 49",
-      adress: "Raghenoplein 21 bis 2800 Mechelen, BE",
-      campus: "Campus De Ham z0.14",
+      email:{
+        title: "hello@dinosource.agency",
+        linkType: "email",
+        to: "hello@dinosource.be",
+      },
+      phone: {
+        title: "+32 492 94 15 49",
+        linkType: "phone",
+        to: "+32 492 94 15 49",
+      },
+      adress: {
+        title: "Raghenoplein 21 bis 2800 Mechelen, BE",
+        linkType: "external",
+        to: "https://www.thomasmore.be/",
+      },
+      campus: {
+        title: "Campus De Ham z0.14",
+        linkType: "external",
+        to: "https://www.thomasmore.be/",
+      },
     },
   },
   pictorial: {
