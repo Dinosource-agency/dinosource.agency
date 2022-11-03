@@ -1,27 +1,43 @@
 @use "../../vars";
 .contact-component {
-  padding: 12.31rem 0 6rem 0;
+  padding: 12rem 0 6rem 0;
   background-color: vars.$color-black;
   overflow: hidden;
   position: relative;
   width: 100%;
+  @media screen and (max-width: vars.$breakpoint-md) {
+    padding: 9rem 0 6rem 0;
+  }
   &__wrapper {
     grid-column: 1/13;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
+    flex-wrap: wrap;
+    @media screen and (max-width: vars.$breakpoint-md) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+      }
     &__title {
-      max-width: 51.5rem;
+      max-width: 45rem;
       font-family: "Akira Expanded", sans-serif;
       font-size: 6rem;
       line-height: 1.2;
-
       color: vars.$color-white;
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        font-size: 4rem;
+        max-width: 35rem;
+      }
+ 
+     
     }
 
     &__animation {
+     
+      
       position: relative;
       top: 0;
       left: 0;
@@ -30,6 +46,14 @@
       cursor: pointer;
       user-select: none;
       border-radius: 50%;
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        width: 16rem;
+        height: 16rem;
+      }
+        @media screen and (max-width: vars.$breakpoint-md) {
+            width: 20rem;
+            height: 20rem;
+        }
       &__image {
         position: absolute;
         top: 0;
@@ -38,6 +62,14 @@
         height: 20rem;
         z-index: 0;
         border-radius: 50%;
+        @media screen and (max-width: vars.$breakpoint-lg) {
+            width: 16rem;
+            height: 16rem;
+          }
+          @media screen and (max-width: vars.$breakpoint-md) {
+            width: 20rem;
+            height: 20rem;
+        }
       }
       &__caption {
         position: absolute;
@@ -49,6 +81,16 @@
         animation: rotate 5s ease-in-out infinite;
         z-index: 0;
         border-radius: 50%;
+        @media screen and (max-width: vars.$breakpoint-lg) {
+            width: 14rem;
+            height: 14rem;
+            margin: 1rem;
+        }
+        @media screen and (max-width: vars.$breakpoint-md) {
+            width: 16rem;
+            height: 16rem;
+            margin: 2rem;
+        }
       }
     }
     @keyframes rotate {
@@ -88,6 +130,32 @@
     }
     &__three {
       z-index: 8;
+    }
+  }
+
+  &__info{
+ 
+    grid-column: 1/13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 22rem;
+        &__title{
+            font-size: 1.5rem;
+            color: vars.$color-muted;
+            @media screen and (max-width: vars.$breakpoint-lg) {
+                font-size: 1.75rem;
+              }
+        }
+        &__description{
+            font-size: 2rem;
+            color: vars.$color-white;
+        }
     }
   }
 }

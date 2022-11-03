@@ -1,5 +1,18 @@
 <script setup>
+import LinkComponent from "@/components/base/LinkComponent.vue";
 import { onMounted, ref } from "vue";
+
+
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  items: {
+        type: Object,
+        required: true,
+  }, 
+});
 
 const contactImages = ref(null);
 const ready = ref(null);
@@ -46,7 +59,7 @@ onMounted(() => {
   <div class="contact-component">
     <div class="u-layout-grid">
       <div class="contact-component__wrapper">
-        <span class="contact-component__wrapper__title">LOOKING FOR THIS?</span>
+        <span class="contact-component__wrapper__title">{{props.title}}</span>
         <div ref="ready" class="contact-component__wrapper__animation">
           <img
             src="images/svg/hover-over.webp"
@@ -57,6 +70,27 @@ onMounted(() => {
             alt="hover over animation"
             class="contact-component__wrapper__animation__image"
           />
+        </div>
+      </div>
+      <div class="contact-component__info">
+        <div class="contact-component__info__item">
+            <span class="contact-component__info__item__title">For the writers:</span>
+            <link-component
+        title="All Projects"
+        to="/work"
+        link-type="internal"
+        class="contact-component__info__item__description">
+        {{props.items.email}}
+       </link-component>
+        </div>
+        <div class="contact-component__info__item">
+            <span class="contact-component__info__item__title">For the speakers:</span>
+            <span class="contact-component__info__item__description"> {{props.items.phone}}</span>
+        </div>
+        <div class="contact-component__info__item">
+
+            <span class="contact-component__info__item__title">Find us at</span>
+            <span class="contact-component__info__item__description">{{props.items.adress}}<br>{{props.items.campus}}</span>
         </div>
       </div>
     </div>
