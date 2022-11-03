@@ -136,7 +136,6 @@ const AboutPageMock = {
 };
 </script>
 <template>
-
   <mission-text-component
     class="p-about__header"
     size="medium"

@@ -9,20 +9,18 @@ const projectsWrapper = ref(null);
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
   if (ScrollTrigger.getAll().length === 0) {
-    
-      gsap.to(".o-project-showcase-component__projects-wrapper", {
-        xPercent: -117,
-        x: () => innerWidth,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: ".o-project-showcase-component",
-          end: () => projectsWrapper.value.innerWidth * 50,
-          scrub: true,
-          pin: true,
-          // markers: true,
-        },
-      })
-   
+    gsap.to(".o-project-showcase-component__projects-wrapper", {
+      xPercent: -117,
+      x: () => innerWidth,
+      ease: "power4.inOut",
+      scrollTrigger: {
+        trigger: ".o-project-showcase-component",
+        end: () => projectsWrapper.value.innerWidth * 50,
+        scrub: true,
+        pin: true,
+        // markers: true,
+      },
+    });
   }
   ScrollTrigger.refresh();
 });
