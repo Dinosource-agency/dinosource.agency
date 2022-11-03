@@ -24,7 +24,7 @@ export const WorkDetailMock = {
         title: "Get to know the vision of one woman collective.",
         description:
           "A … paradox movement for the love of branding, interior and digital design. If you would like to  work with me. Or you can just about me. Actions speak louder than words: we throw ourselves into each project as if it were the first and the last.",
-        image: "/images/cases/sweet16/sweet16_Posters.webp",
+        image: "/images/cases/sweet16/Sweet16_Posters.webp",
         alt: "Picture of posters from the sweet 16",
       },
       bigText: "ELLE VEUT DANSER",
