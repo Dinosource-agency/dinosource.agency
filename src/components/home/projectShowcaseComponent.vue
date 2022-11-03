@@ -9,20 +9,7 @@ const projectsWrapper = ref(null);
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
   if (ScrollTrigger.getAll().length === 0) {
-    gsap.from(
-      projectsWrapper.value,
-      {
-        scrollTrigger: {
-          trigger: projectsWrapper.value,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        stagger: 0.2,
-      },
+    
       gsap.to(".o-project-showcase-component__projects-wrapper", {
         xPercent: -117,
         x: () => innerWidth,
@@ -35,7 +22,7 @@ onMounted(() => {
           // markers: true,
         },
       })
-    );
+   
   }
   ScrollTrigger.refresh();
 });
