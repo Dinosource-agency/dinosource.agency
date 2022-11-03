@@ -5,7 +5,7 @@ const ContactPageMock = {
   contactInfo: {
     title: "looking for this?",
     items: {
-      email:{
+      email: {
         title: "hello@dinosource.agency",
         linkType: "email",
         to: "hello@dinosource.be",

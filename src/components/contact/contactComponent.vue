@@ -99,20 +99,20 @@ onMounted(() => {
         </div>
         <div class="contact-component__info__item">
           <span class="contact-component__info__item__title">Find us at</span>
-          <span class="contact-component__info__item__description"
-            >        <link-component
-            :title="props.items.adress.title"
-            :to="props.items.adress.to"
-            :link-type="props.items.adress.linkType"
-          >
-            {{ props.items.adress.title }}
-          </link-component><br><link-component
-            :title="props.items.campus.title"
-            :to="props.items.campus.to"
-            :link-type="props.items.campus.linkType"
-          >
-            {{ props.items.campus.title }}
-          </link-component></span
+          <span class="contact-component__info__item__description">
+            <link-component
+              :title="props.items.adress.title"
+              :to="props.items.adress.to"
+              :link-type="props.items.adress.linkType"
+            >
+              {{ props.items.adress.title }} </link-component
+            ><br /><link-component
+              :title="props.items.campus.title"
+              :to="props.items.campus.to"
+              :link-type="props.items.campus.linkType"
+            >
+              {{ props.items.campus.title }}
+            </link-component></span
           >
         </div>
       </div>
