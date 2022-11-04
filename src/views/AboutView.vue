@@ -1,7 +1,28 @@
 <script setup>
 import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
 import CardComponent from "@/components/layout/CardComponent.vue";
+import StatisticComponent from "@/components/layout/StatisticComponent.vue";
+import CTABanner from "@/components/layout/CTABanner.vue";
+import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
+import PictorialComponent from "@/components/layout/PictorialComponent.vue";
+import ImageBannerComponent from "@/components/layout/ImageBannerComponent.vue";
+
 const AboutPageMock = {
+  pictorial: {
+    image: "/images/jpg/groepsfoto.jpg",
+    alt: "Group photo",
+  },
+  title: "MEET the npcs at DINOSOURCE V12",
+  about:
+    "ELEVEN CREATIVE CRACKHEADS THAT BUILD EXPLOSIVE EXPERIENCES FOR big league BRANDS.",
+  imageBanner: {
+    title: "We’re kinda like cocaine",
+    description:
+      "Not your basic-ass agency that says yes to every request. We see ourselves as the new kids on the block that want to bring a kick to your projects. Just like cocaine does to ravers.",
+    sideNote: "* Note that we fucking suck at drawing (and don’t do cocaine)",
+    image: "/images/jpg/dinoPresentation.webp",
+    alt: "picture of Lukas giving presentation",
+  },
   team: {
     title: "THESE ARE THE PEOPLE YOU NEED TO KNOW",
     members: [
@@ -84,9 +105,68 @@ const AboutPageMock = {
       },
     ],
   },
+  statistics: {
+    items: [
+      {
+        id: 1,
+        value: "4",
+        description: "Mentors guiding the path for the NPCs",
+      },
+      {
+        id: 2,
+        value: "12",
+        description: "generations of Designosource, 1st version of DinoSource",
+      },
+      {
+        id: 3,
+        value: "11",
+        description: "NPCs in our dinsource team",
+      },
+    ],
+  },
+  ctaBanner: {
+    title: "THINK YOU CAN HANDLE US?",
+    button: {
+      title: "Contact",
+      to: "contact",
+      linkType: "internal",
+    },
+    buttonText: "CONTACT",
+  },
 };
 </script>
 <template>
+  <mission-text-component
+    class="p-about__header"
+    size="medium"
+    backgroundColor="black"
+    heading-style="h1"
+    heading-type="h1"
+    alignment="center"
+    :title="AboutPageMock.title"
+  ></mission-text-component>
+  <pictorial-component
+    :image="AboutPageMock.pictorial.image"
+    :alt="AboutPageMock.pictorial.alt"
+  ></pictorial-component>
+  <mission-text-component
+    size="medium"
+    backgroundColor="black"
+    heading-style="h2"
+    heading-type="h2"
+    alignment="left"
+    :title="AboutPageMock.about"
+  ></mission-text-component>
+  <image-banner-component
+    :title="AboutPageMock.imageBanner.title"
+    :description="AboutPageMock.imageBanner.description"
+    :side-note="AboutPageMock.imageBanner.sideNote"
+    :image="AboutPageMock.imageBanner.image"
+    :alt="AboutPageMock.imageBanner.alt"
+    :align-text-bottom="true"
+  ></image-banner-component>
+  <statistic-component :items="AboutPageMock.statistics.items">
+  </statistic-component>
   <section class="p-about-team">
     <div class="u-layout-grid">
       <div class="p-about-team__wrapper">
@@ -112,4 +192,11 @@ const AboutPageMock = {
       </div>
     </div>
   </section>
+  <c-t-a-banner
+    :to="AboutPageMock.ctaBanner.button.to"
+    :label="AboutPageMock.ctaBanner.button.title"
+    :link-type="AboutPageMock.ctaBanner.button.linkType"
+    :title="AboutPageMock.ctaBanner.title"
+    :buttonText="AboutPageMock.ctaBanner.buttonText"
+  ></c-t-a-banner>
 </template>

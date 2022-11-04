@@ -20,7 +20,12 @@
   Molecules
 */
 @use "components/molecules/_scroll-down";
+@use "components/molecules/_project-showcase-model";
 @use "components/molecules/card";
+@use "components/molecules/image";
+@use "components/molecules/top-bar";
+@use "components/molecules/quote";
+@use "components/molecules/video";
 
 /*
   Organisms
@@ -29,10 +34,16 @@
 @use "components/organisms/permission-modal";
 @use "components/organisms/mission-text";
 @use "components/organisms/work-listing";
+@use "components/organisms/cta-banner";
+@use "components/organisms/statistic";
+@use "components/organisms/pictorial";
 @use "components/organisms/navigation";
 @use "components/organisms/footer";
-
+@use "components/organisms/project-showcase";
+@use "components/organisms/image-banner";
+@use "components/organisms/quote-banner";
 /*
   Pages
  */
 @use "pages/about.scss";
+@use "pages/work-detail";

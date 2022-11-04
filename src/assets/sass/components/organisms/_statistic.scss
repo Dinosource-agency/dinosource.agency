@@ -1,0 +1,43 @@
+@use "../../vars";
+.o-statistic-component {
+  grid-column: 1/13;
+  padding: 6rem 0;
+  @media screen and (max-width: vars.$breakpoint-lg) {
+    padding: 12rem 0rem;
+  }
+
+  color: vars.$color-white;
+  background-color: vars.$color-black;
+
+  .u-layout-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media screen and (max-width: vars.$breakpoint-lg) {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+  &__wrapper {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      max-width: 25rem;
+      &__value {
+        font-size: 6rem;
+        font-family: "Akira Expanded", "sans-serif";
+      }
+      &__description {
+        font-size: 1.5rem;
+        @media screen and (max-width: vars.$breakpoint-sm) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

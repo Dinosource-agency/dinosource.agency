@@ -24,21 +24,21 @@
           >
           <link-component
             title="Work"
-            to="work"
+            to="/work"
             link-type="internal"
             class="a-button o-navigation__items__item"
             >Work</link-component
           >
           <link-component
             title="About"
-            to="about"
+            to="/about"
             link-type="internal"
             class="a-button o-navigation__items__item"
             >About</link-component
           >
           <link-component
             title="contact"
-            to="contact"
+            to="/contact"
             link-type="internal"
             class="a-button a-button--primary o-navigation__items__item--primary"
             >Contact</link-component
@@ -55,7 +55,7 @@
 
     <nav
       class="o-navigation__mobile u-layout-grid"
-      v-bind:class="{ 'o-navigation__mobile--open': !mobileMenuOpen }"
+      :class="{ 'o-navigation__mobile--open': !mobileMenuOpen }"
     >
       <div class="o-navigation__mobile__items">
         <link-component

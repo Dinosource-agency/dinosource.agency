@@ -1,0 +1,86 @@
+@use "../../vars";
+.o-image-banner {
+  padding-top: 6rem;
+  padding-bottom: 12rem;
+  background-color: vars.$color-black;
+
+  @media screen and (max-width: vars.$breakpoint-xl) {
+    padding-bottom: 6rem;
+  }
+
+  &__info {
+    grid-column: 1/6;
+    color: vars.$color-white;
+
+    @media screen and (max-width: vars.$breakpoint-lg) {
+      grid-column: 1/10;
+      grid-row: 2;
+    }
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      grid-column: 1/9;
+      grid-row: 2;
+    }
+
+    &--right {
+      grid-column: 8/13;
+
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        grid-column: 1/10;
+        grid-row: 2;
+      }
+
+      @media screen and (max-width: vars.$breakpoint-md) {
+        grid-column: 1/9;
+        grid-row: 2;
+      }
+    }
+    &--align-bottom {
+      margin-top: auto;
+    }
+    &__description {
+      color: vars.$color-muted;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-size: 1.5rem;
+
+      @media screen and (max-width: vars.$breakpoint-sm) {
+        font-size: 1rem;
+      }
+    }
+    &__side-note {
+      color: vars.$color-muted;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+
+      @media screen and (max-width: vars.$breakpoint-sm) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  &__image {
+    &--right {
+      grid-column: 6/13;
+
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        grid-column: 1/13;
+        grid-row: 1;
+      }
+      @media screen and (max-width: vars.$breakpoint-md) {
+        grid-column: 1/9;
+      }
+    }
+    &--left {
+      grid-column: 1/8;
+      grid-row: 1;
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        grid-column: 1/13;
+        grid-row: 1;
+      }
+      @media screen and (max-width: vars.$breakpoint-md) {
+        grid-column: 1/9;
+      }
+    }
+  }
+}
