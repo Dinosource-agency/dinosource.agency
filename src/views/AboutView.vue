@@ -1,139 +1,14 @@
 <script setup>
-import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
-import CardComponent from "@/components/layout/CardComponent.vue";
-import StatisticComponent from "@/components/layout/StatisticComponent.vue";
-import CTABanner from "@/components/layout/CTABanner.vue";
-import MissionTextComponent from "@/components/layout/MissionTextComponent.vue";
-import PictorialComponent from "@/components/layout/PictorialComponent.vue";
-import ImageBannerComponent from "@/components/layout/ImageBannerComponent.vue";
-
-const AboutPageMock = {
-  pictorial: {
-    image: "/images/jpg/groepsfoto.jpg",
-    alt: "Group photo",
-  },
-  title: "MEET the npcs at DINOSOURCE V12",
-  about:
-    "ELEVEN CREATIVE CRACKHEADS THAT BUILD EXPLOSIVE EXPERIENCES FOR big league BRANDS.",
-  imageBanner: {
-    title: "We’re kinda like cocaine",
-    description:
-      "Not your basic-ass agency that says yes to every request. We see ourselves as the new kids on the block that want to bring a kick to your projects. Just like cocaine does to ravers.",
-    sideNote: "* Note that we fucking suck at drawing (and don’t do cocaine)",
-    image: "/images/jpg/dinoPresentation.webp",
-    alt: "picture of Lukas giving presentation",
-  },
-  team: {
-    title: "THESE ARE THE PEOPLE YOU NEED TO KNOW",
-    members: [
-      {
-        id: 1,
-        imageSrc: "/images/team/seppe.webp",
-        imageAlt: "Picture of Seppe",
-        cardTitle: "Seppe",
-        name: ["Seppe"],
-      },
-      {
-        id: 2,
-        imageSrc: "/images/team/elien.webp",
-        imageAlt: "Picture of Elien",
-        cardTitle: "Elien",
-        name: ["Elien"],
-      },
-      {
-        id: 3,
-        imageSrc: "/images/team/ismael.webp",
-        imageAlt: "Picture of Ismael",
-        cardTitle: "Ismael",
-        name: ["Ismael"],
-      },
-      {
-        id: 4,
-        imageSrc: "/images/team/ellen.webp",
-        imageAlt: "Picture of Ellen",
-        cardTitle: "Ellen",
-        name: ["Ellen"],
-      },
-      {
-        id: 5,
-        imageSrc: "/images/team/robbe.webp",
-        imageAlt: "Picture of robbe",
-        cardTitle: "robbe",
-        name: ["Robbe"],
-      },
-      {
-        id: 6,
-        imageSrc: "/images/team/alejandro.webp",
-        imageAlt: "Picture of alejandro",
-        cardTitle: "alejandro",
-        name: ["Alejandro"],
-      },
-      {
-        id: 7,
-        imageSrc: "/images/team/lukas.webp",
-        imageAlt: "Picture of lukas",
-        cardTitle: "lukas",
-        name: ["Lukas"],
-      },
-      {
-        id: 8,
-        imageSrc: "/images/team/rickey.webp",
-        imageAlt: "Picture of rickey",
-        cardTitle: "rickey",
-        name: ["Rickey"],
-      },
-      {
-        id: 9,
-        imageSrc: "/images/team/robin.webp",
-        imageAlt: "Picture of robin",
-        cardTitle: "robin",
-        name: ["Robin"],
-      },
-      {
-        id: 10,
-        imageSrc: "/images/team/aimane.webp",
-        imageAlt: "Picture of aimane",
-        cardTitle: "aimane",
-        name: ["Aimane"],
-      },
-      {
-        id: 11,
-        imageSrc: "/images/team/sien.webp",
-        imageAlt: "Picture of sien",
-        cardTitle: "sien",
-        name: ["Sien"],
-      },
-    ],
-  },
-  statistics: {
-    items: [
-      {
-        id: 1,
-        value: "4",
-        description: "Mentors guiding the path for the NPCs",
-      },
-      {
-        id: 2,
-        value: "12",
-        description: "generations of Designosource, 1st version of DinoSource",
-      },
-      {
-        id: 3,
-        value: "11",
-        description: "NPCs in our dinsource team",
-      },
-    ],
-  },
-  ctaBanner: {
-    title: "THINK YOU CAN HANDLE US?",
-    button: {
-      title: "Contact",
-      to: "contact",
-      linkType: "internal",
-    },
-    buttonText: "CONTACT",
-  },
-};
+import {
+  DynamicHeadingComponent,
+  CardComponent,
+  StatisticComponent,
+  CTABanner,
+  MissionTextComponent,
+  PictorialComponent,
+  ImageBannerComponent,
+} from "@/components";
+import { AboutPageMock } from "@/mocks";
 </script>
 <template>
   <mission-text-component

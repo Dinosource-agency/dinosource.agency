@@ -20,28 +20,28 @@
             to="/"
             link-type="internal"
             class="a-button o-navigation__items__item"
-            >Home</link-component
+            >How we roll</link-component
           >
           <link-component
             title="Work"
             to="/work"
             link-type="internal"
             class="a-button o-navigation__items__item"
-            >Work</link-component
+            >What we do</link-component
           >
           <link-component
             title="About"
             to="/about"
             link-type="internal"
             class="a-button o-navigation__items__item"
-            >About</link-component
+            >Who we are</link-component
           >
           <link-component
             title="contact"
             to="/contact"
             link-type="internal"
             class="a-button a-button--primary o-navigation__items__item--primary"
-            >Contact</link-component
+            >Reach out</link-component
           >
         </div>
         <button

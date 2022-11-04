@@ -93,7 +93,6 @@ onMounted(() => {
           <link-component
             :title="item.linkTitle"
             :to="item.to"
-            class="contact-component__info__item__description"
             :link-type="item.linkType"
           >
             {{ item.linkTitle }}

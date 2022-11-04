@@ -13,7 +13,7 @@ import FooterComponent from "@/components/app/FooterComponent.vue";
 
 const footerMock = {
   contact: {
-    title: "CONTACT",
+    title: "Reach out",
     links: [
       {
         title: "hello@dinosource.be",
@@ -33,7 +33,7 @@ const footerMock = {
     ],
   },
   socials: {
-    title: "FIND US HERE",
+    title: "Discover more on",
     links: [
       {
         title: "Instagram",

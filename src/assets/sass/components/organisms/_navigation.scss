@@ -34,7 +34,7 @@
       color: vars.$color-muted;
     }
     &__item--primary {
-      color: vars.$color-black;
+      color: vars.$color-black !important;
     }
     @media screen and (max-width: vars.$breakpoint-lg) {
       display: none;
