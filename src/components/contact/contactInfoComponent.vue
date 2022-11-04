@@ -74,8 +74,8 @@ onMounted(() => {
       <div class="contact-component__info">
         <div
           class="contact-component__info__item"
-          v-bind="items.id"
           v-for="item in items"
+          v-bind:key="item.id"
         >
           <span class="contact-component__info__item__title">{{
             item.title
