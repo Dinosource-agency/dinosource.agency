@@ -1,0 +1,201 @@
+@use "../../vars";
+.contact-component {
+  padding: 12rem 0 6rem 0;
+  background-color: vars.$color-black;
+
+  position: relative;
+  width: 100%;
+  @media screen and (max-width: vars.$breakpoint-md) {
+    padding: 9rem 0 6rem 0;
+  }
+  &__wrapper {
+    grid-column: 1/13;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: vars.$breakpoint-md) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+    }
+    &__title {
+      max-width: 55rem;
+      font-family: "Akira Expanded", sans-serif;
+      line-height: 1.2;
+      color: vars.$color-white;
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        font-size: 4rem;
+        max-width: 40rem;
+      }
+    }
+
+    &__animation {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 20rem;
+      height: 20rem;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 50%;
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        width: 16rem;
+        height: 16rem;
+      }
+      @media screen and (max-width: vars.$breakpoint-md) {
+        width: 20rem;
+        height: 20rem;
+      }
+      &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20rem;
+        height: 20rem;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        @media screen and (max-width: vars.$breakpoint-lg) {
+          width: 16rem;
+          height: 16rem;
+        }
+        @media screen and (max-width: vars.$breakpoint-md) {
+          width: 20rem;
+          height: 20rem;
+        }
+      }
+      &__caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20rem;
+        height: 20rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: rotate 5s ease-in-out infinite;
+        z-index: 0;
+        border-radius: 50%;
+        @media screen and (max-width: vars.$breakpoint-lg) {
+          width: 14rem;
+          height: 14rem;
+          margin: 1rem;
+        }
+        @media screen and (max-width: vars.$breakpoint-md) {
+          width: 18rem;
+          height: 18rem;
+          margin: 1rem;
+        }
+      }
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__image-container {
+    user-select: none;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    &__image {
+      position: absolute;
+      width: 20rem;
+      width: 20rem;
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__one {
+      z-index: 6;
+    }
+    &__two {
+      z-index: 7;
+    }
+    &__three {
+      z-index: 8;
+    }
+  }
+
+  &__info {
+    grid-column: 1/13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    padding: 6rem 0 0rem 0;
+    @media screen and (max-width: vars.$breakpoint-md) {
+      padding: 3rem 0 0rem 0;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 22rem;
+      &__title {
+        font-size: 1.5rem;
+        color: vars.$color-muted;
+        @media screen and (max-width: vars.$breakpoint-md) {
+          font-size: 1.25rem;
+        }
+      }
+      .a-link {
+        font-size: 2rem;
+        color: vars.$color-white !important;
+        @media screen and (max-width: vars.$breakpoint-lg) {
+          font-size: 1.75rem;
+        }
+        @media screen and (max-width: vars.$breakpoint-md) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    @media screen and (max-width: vars.$breakpoint-lg) {
+      &__item:nth-child(1) {
+        order: 1;
+      }
+      &__item:nth-child(2) {
+        order: 3;
+      }
+      &__item:nth-child(3) {
+        order: 2;
+      }
+    }
+    @media screen and (max-width: vars.$breakpoint-md) {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      &__item:nth-child(1) {
+        order: 1;
+      }
+      &__item:nth-child(2) {
+        order: 2;
+      }
+      &__item:nth-child(3) {
+        order: 3;
+      }
+    }
+  }
+}
+.pictorial-component--contact {
+  padding-bottom: 6rem;
+}
