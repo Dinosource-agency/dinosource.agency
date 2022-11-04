@@ -11,7 +11,7 @@ defineProps({
 });
 </script>
 <template>
-  <video class="m-video" muted="muted" autoplay loop>
+  <video class="m-video" muted="muted" autoplay preload="metadata" loop>
     <source :src="source" :type="type" />
   </video>
 </template>

@@ -1,0 +1,19 @@
+@use "../vars";
+.p-work {
+  &__listing {
+    &--desktop {
+      display: block;
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        display: none;
+      }
+    }
+    &--tablet {
+      display: none;
+      padding-top: 12rem ;
+      padding-bottom: 6rem;
+      @media screen and (max-width: vars.$breakpoint-lg) {
+        display: block;
+      }
+    }
+  }
+}

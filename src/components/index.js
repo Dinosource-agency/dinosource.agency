@@ -8,7 +8,7 @@ export { default as StatisticComponent } from "./layout/StatisticComponent.vue";
 
 export { default as ProjectShowcaseComponent } from "./home/projectShowcaseComponent.vue";
 export { default as projectShowcaseModel } from "./home/projectShowcaseModel.vue";
-export { default } from "./work/WorkListingComponent.vue";
+export { default as WorkListingComponent } from "./work/WorkListingComponent.vue";
 export { default as CardGridComponent } from "./base/CardGridComponent.vue";
 export { default as ScrollDown } from "./btn/ScrollDown.vue";
 

@@ -4,7 +4,7 @@
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: auto;
   grid-gap: 1.5rem;
-
+  max-width: 100%;
   @media screen and (max-width: vars.$breakpoint-lg) {
     grid-template-columns: repeat(8, 1fr);
   }
@@ -12,8 +12,9 @@
   @media screen and (max-width: vars.$breakpoint-md) {
     grid-template-columns: repeat(4, 1fr);
   }
-
-  &__card {
+  &__card{
     grid-column: span 4;
+    margin-bottom: 1rem;
   }
+
 }
