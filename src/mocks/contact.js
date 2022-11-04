@@ -1,6 +1,6 @@
 export const contactPageMock = {
   contactInfo: {
-    title: "looking for this?",
+    title: "Think you can handle us?",
     items: [
       {
         id: 0,
