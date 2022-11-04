@@ -4,6 +4,14 @@
     margin-bottom: 1.5rem;
     display: block;
     max-width: 100%;
-    border-radius: vars.$border-radius;
+    img {
+      border-radius: vars.$border-radius;
+    }
+  }
+  &__title {
+    color: vars.$color-white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: "DM Sans";
   }
 }

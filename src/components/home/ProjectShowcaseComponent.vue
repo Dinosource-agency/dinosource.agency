@@ -44,9 +44,9 @@ onBeforeUnmount(() => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });
 
-defineProps({
+const props = defineProps({
   projectShowcase: {
-    type: Array,
+    type: Object,
     required: true,
   },
 });
@@ -59,11 +59,10 @@ defineProps({
         class="o-project-showcase-component__projects-wrapper"
       >
         <project-showcase-model
-          v-for="project in projectShowcase"
-          :key="project.slug"
-          :title="project.title"
-          :slug="project.slug"
-          :image="project.logo"
+          v-for="project in props.projectShowcase.projects"
+          :key="project.name"
+          :project="project"
+          :image="project.image"
         ></project-showcase-model>
       </div>
       <link-component
@@ -72,11 +71,7 @@ defineProps({
         link-type="internal"
         class="o-project-showcase-component__link"
       >
-        ALL PROJECTS &nbsp;
-        <img
-          alt="icon of arrow pointing right"
-          src="/images/icons/arrow-right.svg"
-        />
+        ALL PROJECTS &nbsp; <img src="/images/icons/arrow-right.svg" />
       </link-component>
     </div>
     <span class="o-project-showcase-component__title">Work</span>

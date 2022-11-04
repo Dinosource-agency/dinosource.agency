@@ -1,8 +1,12 @@
 <script setup>
 import LinkComponent from "@/components/base/LinkComponent.vue";
-const props = defineProps({
-  project: {
-    type: Object,
+defineProps({
+  slug: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
     required: true,
   },
   image: {
@@ -10,17 +14,15 @@ const props = defineProps({
     required: true,
   },
 });
-const projectName = props.project.name.toString();
 </script>
 <template>
   <div class="o-project-showcase-model">
     <link-component
-      title="All Projects"
-      link-type="internal"
+      :title="title"
       class="o-project-showcase-model__link"
-      :to="`/work/${projectName}`"
+      :to="`/work/${slug}`"
     >
-      <img class="o-project-showcase-model__image" :src="props.image" />
+      <img class="o-project-showcase-model__image" :src="image" />
     </link-component>
   </div>
 </template>

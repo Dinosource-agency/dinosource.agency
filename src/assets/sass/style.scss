@@ -42,8 +42,10 @@
 @use "components/organisms/project-showcase";
 @use "components/organisms/image-banner";
 @use "components/organisms/quote-banner";
+@use "components/organisms/card-grid";
 /*
   Pages
  */
-@use "pages/about.scss";
+@use "pages/about";
 @use "pages/work-detail";
+@use "pages/home";
