@@ -2,7 +2,7 @@
 .contact-component {
   padding: 12rem 0 6rem 0;
   background-color: vars.$color-black;
-  overflow: hidden;
+
   position: relative;
   width: 100%;
   @media screen and (max-width: vars.$breakpoint-md) {
@@ -22,14 +22,13 @@
       gap: 3rem;
     }
     &__title {
-      max-width: 45rem;
+      max-width: 55rem;
       font-family: "Akira Expanded", sans-serif;
-      font-size: 6rem;
       line-height: 1.2;
       color: vars.$color-white;
       @media screen and (max-width: vars.$breakpoint-lg) {
         font-size: 4rem;
-        max-width: 35rem;
+        max-width: 40rem;
       }
     }
 
@@ -57,6 +56,9 @@
         width: 20rem;
         height: 20rem;
         z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 50%;
         @media screen and (max-width: vars.$breakpoint-lg) {
           width: 16rem;
@@ -71,9 +73,12 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 16rem;
-        height: 16rem;
-        margin: 2rem;
+        width: 20rem;
+        height: 20rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
         animation: rotate 5s ease-in-out infinite;
         z-index: 0;
         border-radius: 50%;
@@ -83,9 +88,9 @@
           margin: 1rem;
         }
         @media screen and (max-width: vars.$breakpoint-md) {
-          width: 16rem;
-          height: 16rem;
-          margin: 2rem;
+          width: 18rem;
+          height: 18rem;
+          margin: 1rem;
         }
       }
     }

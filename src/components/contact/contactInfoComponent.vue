@@ -1,5 +1,9 @@
 <script setup>
-import LinkComponent from "@/components/base/LinkComponent.vue";
+import {
+  LinkComponent,
+  DynamicHeadingComponent,
+  PictorialComponent,
+} from "@/components";
 import { onMounted, ref } from "vue";
 
 defineProps({
@@ -58,17 +62,23 @@ onMounted(() => {
   <div class="contact-component">
     <div class="u-layout-grid">
       <div class="contact-component__wrapper">
-        <span class="contact-component__wrapper__title">{{ title }}</span>
+        <dynamic-heading-component
+          heading-style="h1"
+          heading-type="h1"
+          class="contact-component__wrapper__title"
+          >{{ title }}</dynamic-heading-component
+        >
         <div ref="ready" class="contact-component__wrapper__animation">
-          <img
-            src="images/svg/hover-over.webp"
+          <pictorial-component
+            image="images/svg/hover-over.webp"
+            alt="hover over caption"
             class="contact-component__wrapper__animation__caption"
-          />
-          <img
-            src="images/animation/ready4impact.webp"
+          ></pictorial-component>
+          <pictorial-component
+            image="images/animation/ready4impact.webp"
             alt="hover over animation"
             class="contact-component__wrapper__animation__image"
-          />
+          ></pictorial-component>
         </div>
       </div>
       <div class="contact-component__info">
