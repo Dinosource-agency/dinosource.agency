@@ -45,18 +45,24 @@ import { WorkDetailMock } from "@/mocks";
             </div>
           </link-component>
         </div>
-        <div class="p-about-team__grid">
-          <card-component
+        <div class="p-work__grid">
+          <link-component
             v-for="card in WorkDetailMock.projects.slice(0, 3)"
             :key="card.slug"
             :title="card.title"
-            :image-alt="card.alt"
-            :image-src="card.logo"
-            :card-title="card.title"
-            :card-tags="card.tags"
-            class="p-about-team__grid__card"
+            :to="`/work/${card.slug}`"
+            class="p-work__grid__card"
           >
-          </card-component>
+            <card-component
+              :title="card.title"
+              :image-alt="card.alt"
+              :image-src="card.logo"
+              :card-title="card.title"
+              :card-tags="card.tags"
+              class="p-work__grid__card"
+            >
+            </card-component>
+          </link-component>
         </div>
       </div>
     </section>

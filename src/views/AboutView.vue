@@ -42,7 +42,7 @@ import { AboutPageMock } from "@/mocks";
   ></image-banner-component>
   <statistic-component :items="AboutPageMock.statistics.items">
   </statistic-component>
-  <section class="p-about-team">
+  <section class="p-work-team">
     <div class="u-layout-grid">
       <div class="p-about-team__wrapper">
         <dynamic-heading-component
