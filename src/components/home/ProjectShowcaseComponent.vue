@@ -2,8 +2,7 @@
 import { onMounted, onBeforeUnmount, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import LinkComponent from "@/components/base/LinkComponent.vue";
-import ProjectShowcaseModel from "@/components/home/projectShowcaseModel.vue";
+import { LinkComponent, ProjectShowcaseModel } from "@/components";
 const projectsWrapper = ref(null);
 
 onMounted(() => {
@@ -44,9 +43,9 @@ onBeforeUnmount(() => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });
 
-const props = defineProps({
+defineProps({
   projectShowcase: {
-    type: Object,
+    type: Array,
     required: true,
   },
 });
@@ -59,10 +58,11 @@ const props = defineProps({
         class="o-project-showcase-component__projects-wrapper"
       >
         <project-showcase-model
-          v-for="project in props.projectShowcase.projects"
-          :key="project.name"
-          :project="project"
-          :image="project.image"
+          v-for="project in projectShowcase"
+          :key="project.slug"
+          :title="project.title"
+          :slug="project.slug"
+          :image="project.logo"
         ></project-showcase-model>
       </div>
       <link-component
@@ -71,7 +71,11 @@ const props = defineProps({
         link-type="internal"
         class="o-project-showcase-component__link"
       >
-        ALL PROJECTS &nbsp; <img src="/images/icons/arrow-right.svg" />
+        ALL PROJECTS &nbsp;
+        <img
+          alt="icon of arrow pointing right"
+          src="/images/icons/arrow-right.svg"
+        />
       </link-component>
     </div>
     <span class="o-project-showcase-component__title">Work</span>
