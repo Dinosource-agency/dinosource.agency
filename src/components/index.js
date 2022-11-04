@@ -6,7 +6,7 @@ export { default as MissionTextComponent } from "./layout/MissionTextComponent.v
 export { default as PictorialComponent } from "./layout/PictorialComponent.vue";
 export { default as StatisticComponent } from "./layout/StatisticComponent.vue";
 
-export { default as ProjectShowcaseComponent } from "./home/projectShowcaseComponent.vue";
+export { default as ProjectShowcaseComponent } from "./home/ProjectShowcaseComponent.vue";
 export { default as projectShowcaseModel } from "./home/projectShowcaseModel.vue";
 
 export { default as contactInfoComponent } from "./contact/contactInfoComponent.vue";
