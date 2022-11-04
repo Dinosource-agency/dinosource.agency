@@ -1,0 +1,32 @@
+@use "../vars";
+.p-home {
+  &__project-showcase {
+    display: block;
+    @media screen and (max-width: vars.$breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  &__projects {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: none;
+    @media screen and (max-width: vars.$breakpoint-lg) {
+      display: block;
+    }
+    &__navigation {
+      color: vars.$color-white;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__link {
+        display: flex;
+        gap: 1rem;
+        color: vars.$color-white;
+      }
+    }
+    &__project-showcase-grid {
+    }
+  }
+}

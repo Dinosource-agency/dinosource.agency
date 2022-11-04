@@ -138,6 +138,7 @@ onMounted(() => {
 
   //capturing the canvas element and enabeling scroll for mobile
   renderer.renderer.domElement.style.touchAction = "auto";
+  renderer.renderer.domElement.style.width = "100%";
 });
 
 const requestAccess = () => {

@@ -1,5 +1,5 @@
 <script setup>
-import DynamicHeadingComponent from "@/components/base/DynamicHeadingComponent.vue";
+import { DynamicHeadingComponent, ImageComponent } from "@/components";
 
 defineProps({
   imageSrc: {
@@ -24,13 +24,18 @@ defineProps({
 
 <template>
   <div class="m-card">
-    <img class="m-card__image" :src="imageSrc" :alt="imageAlt" />
+    <image-component
+      class="m-card__image"
+      :src="imageSrc"
+      :alt="imageAlt"
+    ></image-component>
     <dynamic-heading-component
       v-if="cardTitle"
+      class="m-card__title"
       heading-style="h3"
       heading-type="h3"
     >
-      {{ cardTitle }}
+      {{ cardTitle.toUpperCase() }}
     </dynamic-heading-component>
     <div v-if="cardTags">
       <span :key="tag" v-for="tag in cardTags" class="a-tag">{{ tag }}</span>

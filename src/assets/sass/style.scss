@@ -33,6 +33,7 @@
 @use "components/organisms/dino-head-hero";
 @use "components/organisms/permission-modal";
 @use "components/organisms/mission-text";
+@use "components/organisms/work-listing";
 @use "components/organisms/cta-banner";
 @use "components/organisms/statistic";
 @use "components/organisms/pictorial";
@@ -42,8 +43,11 @@
 @use "components/organisms/image-banner";
 @use "components/organisms/contact-info";
 @use "components/organisms/quote-banner";
+@use "components/organisms/card-grid";
 /*
   Pages
  */
-@use "pages/about.scss";
+@use "pages/about";
 @use "pages/work-detail";
+@use "pages/home";
+@use "pages/work";
