@@ -1,5 +1,5 @@
 <script setup>
-import LinkComponent from "@/components/base/LinkComponent.vue";
+import { LinkComponent, ImageComponent } from "@/components";
 import { onMounted } from "vue";
 
 onMounted(() => {
@@ -50,20 +50,21 @@ const tagsToString = (tags) => {
     <div class="u-layout-grid">
       <link-component
         v-for="project in projects"
-        v-bind:key="project.name"
-        :title="project.name"
-        :to="project.link"
+        v-bind:key="project.slug"
+        :title="project.title"
+        :to="'/work/' + project.slug"
         link-type="internal"
         class="work-listing__item"
       >
-        <span class="work-listing__item__title">{{ project.name }}</span>
+        <span class="work-listing__item__title">{{ project.title }}</span>
         <div class="work-listing__item__hover-reveal">
           <div class="work-listing__item__hover-reveal__inner">
             <div class="work-listing__item__hover-reveal__inner__img">
-              <img
+              <image-component
                 class="work-listing__item__hover-reveal__inner__img__image"
-                src="https://picsum.photos/400/400"
-              />
+                :src="project.logo"
+                :alt="project.title"
+              ></image-component>
             </div>
           </div>
         </div>

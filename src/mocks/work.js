@@ -55,38 +55,5 @@ export const WorkDetailMock = {
         },
       ],
     },
-    {
-      id: 1,
-      slug: "project-title",
-      projectTitle: "Project title",
-      projectDescription: "Project Description",
-      projectVideo: "Project Video",
-      projectImages: [
-        {
-          image: "Project Image 1",
-          alt: "Project Image 1 Alt",
-        },
-        {
-          image: "Project Image 2",
-          alt: "Project Image 2 Alt",
-        },
-        {
-          image: "Project Image 3",
-          alt: "Project Image 3 Alt",
-        },
-        {
-          image: "Project Image 4",
-          alt: "Project Image 4 Alt",
-        },
-        {
-          image: "Project Image 5",
-          alt: "Project Image 5 Alt",
-        },
-        {
-          image: "Project Image 6",
-          alt: "Project Image 6 Alt",
-        },
-      ],
-    },
   ],
 };
