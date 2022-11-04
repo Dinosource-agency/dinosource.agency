@@ -12,9 +12,8 @@
   @media screen and (max-width: vars.$breakpoint-md) {
     grid-template-columns: repeat(4, 1fr);
   }
-  &__card{
+  &__card {
     grid-column: span 4;
     margin-bottom: 1rem;
   }
-
 }

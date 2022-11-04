@@ -10,7 +10,9 @@ import { WorkDetailMock } from "@/mocks";
     ></work-listing-component>
     <section class="p-work__listing--tablet">
       <div class="u-layout-constrain">
-      <card-grid-component :cards="WorkDetailMock.projects"></card-grid-component>
+        <card-grid-component
+          :cards="WorkDetailMock.projects"
+        ></card-grid-component>
       </div>
     </section>
   </main>
