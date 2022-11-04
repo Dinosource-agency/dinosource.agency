@@ -2,6 +2,7 @@
 .work-listing {
   background-color: vars.$color-black;
   padding: 12.4rem 0rem 6.125rem 0rem;
+  overflow: hidden;
   grid-column: 1/13;
   .u-layout-grid {
     gap: 2rem;
