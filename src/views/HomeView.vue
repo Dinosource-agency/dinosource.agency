@@ -3,9 +3,9 @@ import {
   DinoHeadHero,
   MissionTextComponent,
   ProjectShowcaseComponent,
-  CardGridComponent,
   DynamicHeadingComponent,
   LinkComponent,
+  CardComponent,
 } from "@/components";
 import { WorkDetailMock } from "@/mocks";
 </script>
@@ -45,9 +45,19 @@ import { WorkDetailMock } from "@/mocks";
             </div>
           </link-component>
         </div>
-        <card-grid-component
-          :cards="WorkDetailMock.projects.slice(0, 3)"
-        ></card-grid-component>
+        <div class="p-about-team__grid">
+          <card-component
+            v-for="card in WorkDetailMock.projects.slice(0, 3)"
+            :key="card.slug"
+            :title="card.title"
+            :image-alt="card.alt"
+            :image-src="card.logo"
+            :card-title="card.title"
+            :card-tags="card.tags"
+            class="p-about-team__grid__card"
+          >
+          </card-component>
+        </div>
       </div>
     </section>
   </main>

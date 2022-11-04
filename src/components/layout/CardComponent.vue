@@ -37,7 +37,7 @@ defineProps({
     >
       {{ cardTitle.toUpperCase() }}
     </dynamic-heading-component>
-    <div v-if="cardTags">
+    <div class="m-card__tags" v-if="cardTags">
       <span :key="tag" v-for="tag in cardTags" class="a-tag">{{ tag }}</span>
     </div>
     <span v-else-if="cardTag" class="a-tag">{{ cardTag }}</span>
