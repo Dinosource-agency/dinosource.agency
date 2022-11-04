@@ -2,8 +2,7 @@
 import { onMounted, onBeforeUnmount, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import LinkComponent from "@/components/base/LinkComponent.vue";
-import ProjectShowcaseModel from "@/components/home/projectShowcaseModel.vue";
+import { LinkComponent, ProjectShowcaseModel } from "@/components";
 const projectsWrapper = ref(null);
 
 onMounted(() => {

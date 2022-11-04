@@ -25,3 +25,4 @@ export { default as VideoComponent } from "./base/VideoComponent.vue";
 
 export { default as FooterComponent } from "./app/FooterComponent.vue";
 export { default as NavigationComponent } from "./app/NavigationComponent.vue";
+export { default as ProjectShowcaseModel } from "./home/projectShowcaseModel.vue";
