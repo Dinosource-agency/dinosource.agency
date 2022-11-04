@@ -14,13 +14,12 @@
     margin-bottom: 1rem;
     font-family: "DM Sans";
   }
-  &__tags{
+  &__tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    .a-tag{
+    .a-tag {
       margin: 0;
     }
-
   }
 }
