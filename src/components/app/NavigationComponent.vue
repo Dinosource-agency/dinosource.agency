@@ -67,21 +67,21 @@
         >
         <link-component
           title="Work"
-          to="work"
+          to="/work"
           link-type="internal"
           class="o-navigation__mobile__items__item"
           >Work</link-component
         >
         <link-component
           title="About"
-          to="about"
+          to="/about"
           link-type="internal"
           class="o-navigation__mobile__items__item"
           >About</link-component
         >
         <link-component
           title="Contact"
-          to="contact"
+          to="/contact"
           link-type="internal"
           class="o-navigation__mobile__items__item"
           >Contact</link-component
