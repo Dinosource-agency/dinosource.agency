@@ -36,7 +36,7 @@ export const AboutPageMock = {
       },
       {
         id: 3,
-        imageSrc: "/images/team/ismael.webp",
+        imageSrc: "/images/team/ismail.webp",
         imageAlt: "Picture of Ismael",
         cardTitle: "Ismael",
         name: ["Ismael"],
@@ -121,10 +121,10 @@ export const AboutPageMock = {
   ctaBanner: {
     title: "THINK YOU CAN HANDLE US?",
     button: {
-      title: "Contact",
+      title: "contact",
       to: "contact",
       linkType: "internal",
     },
-    buttonText: "CONTACT",
+    buttonText: "Reach out",
   },
 };

@@ -1,6 +1,5 @@
 <script setup>
 import { useRoute } from "vue-router";
-import router from "@/router";
 import {
   CTABanner,
   MissionTextComponent,
@@ -22,7 +21,7 @@ const project = WorkDetailMock.projects.find(
 );
 
 if (!project) {
-  router.replace({ name: "about" });
+  window.location.href = "/not-found";
 }
 </script>
 <template>

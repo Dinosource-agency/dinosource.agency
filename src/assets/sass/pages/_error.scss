@@ -1,0 +1,29 @@
+@use "../vars";
+.p-error {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  &__title {
+    text-align: center;
+    color: vars.$color-white;
+  }
+  &__subtitle {
+    text-align: center;
+    color: vars.$color-grey;
+  }
+  &__paragraph {
+    text-align: center;
+    color: vars.$color-muted;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: 51rem;
+    @media screen and (max-width: vars.$breakpoint-sm) {
+      font-size: 1rem;
+    }
+  }
+}

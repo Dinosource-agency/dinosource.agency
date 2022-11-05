@@ -33,7 +33,7 @@ defineProps({
       <button
         class="a-button a-button--primary o-navigation__items__item--primary"
       >
-        {{ buttonText.toUpperCase() }}
+        {{ buttonText }}
       </button>
     </link-component>
   </div>
