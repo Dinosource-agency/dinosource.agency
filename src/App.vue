@@ -41,7 +41,7 @@ const footerMock = {
         to: "https://www.instagram.com/dinosource.agency/",
       },
       {
-        title: "Tiktok",
+        title: "TikTok",
         linkType: "external",
         to: "https://www.tiktok.com/@dinosource.agency",
       },
