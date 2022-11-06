@@ -59,6 +59,32 @@ const footerMock = {
     ],
   },
 };
+
+let origTitle = "Your fucking agency",
+  animatedTitle,
+  timer;
+let animateTitle = () => {
+  var currentState = false;
+  origTitle = document.title;
+  animatedTitle = "Get the fuck back here! ";
+  timer = setInterval(() => {
+    document.title = currentState ? origTitle : animatedTitle;
+    currentState = !currentState;
+  }, 1000);
+};
+
+let restoreTitle = () => {
+  clearInterval(timer);
+  document.title = origTitle;
+};
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState == "visible") {
+    restoreTitle();
+  } else {
+    animateTitle();
+  }
+});
 </script>
 
 <style lang="sass">
