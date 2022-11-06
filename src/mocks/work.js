@@ -176,31 +176,31 @@ export const WorkDetailMock = {
       team: [
         {
           id: 0,
-          personName: "Robbe Bierebeeck",
+          personName: "Robbe",
           personPicture: "/images/team/robbe.webp",
           personAlt: "A picture of Robbe Bierebeeck",
         },
         {
           id: 1,
-          personName: "Lukas Haentjens",
+          personName: "Lukas",
           personPicture: "/images/team/lukas.webp",
           personAlt: "A picture of Lukas Haentjens",
         },
         {
           id: 2,
-          personName: "Seppe Vangeel",
+          personName: "Seppe",
           personPicture: "/images/team/seppe.webp",
           personAlt: "A picture of Seppe Vangeel",
         },
         {
           id: 3,
-          personName: "Ismail El Ghamri",
+          personName: "Ismail",
           personPicture: "/images/team/ismail.webp",
           personAlt: "A picture of Ismail El Ghamri",
         },
         {
           id: 4,
-          personName: "Robin Van Overloop",
+          personName: "Robin",
           personPicture: "/images/team/robin.webp",
           personAlt: "A picture of Robin Van Overloop",
         },
