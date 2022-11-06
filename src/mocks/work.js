@@ -24,17 +24,11 @@ export const WorkDetailMock = {
       imageBanner: {
         title: "Get to know the vision of one woman collective.",
         description:
-          "A … paradox movement for the love of branding, interior and digital design. If you would like to  work with me. Or you can just about me. Actions speak louder than words: we throw ourselves into each project as if it were the first and the last.",
+          "This is a paradoxical movement for the love of branding, interior and digital design. Take a look and decide if you would like to work with me. Actions speak louder than words: we throw ourselves into each project as if it were the first and the last.",
         image: "/images/cases/owc/butterfly.webp",
-        alt: "Picture of posters from the sweet 16",
+        alt: "Picture of the One Woman Collective butterfly",
       },
       bigText: "ELLE VEUT DANSER",
-      quoteBlock: {
-        quote:
-          "This should ideally be an optional section where we can put a quote from the client we worked with.",
-        description:
-          "As for this text we could include some more depth about our collab with Linde and how we worked on this project. With older projects like these, we can’t really incorporate both the quote and descriptive text since we haven’t worked on this project ourselves.",
-      },
       projectImages: [
         {
           id: 0,
