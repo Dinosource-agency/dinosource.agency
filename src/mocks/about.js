@@ -71,10 +71,10 @@ export const AboutPageMock = {
       },
       {
         id: 8,
-        imageSrc: "/images/team/rickey.webp",
-        imageAlt: "Picture of rickey",
-        cardTitle: "rickey",
-        name: ["Rickey"],
+        imageSrc: "/images/team/ricky.webp",
+        imageAlt: "Picture of ricky",
+        cardTitle: "ricky",
+        name: ["Ricky"],
       },
       {
         id: 9,
