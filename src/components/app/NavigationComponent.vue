@@ -110,7 +110,6 @@ const toggleMenu = () => {
   }
 };
 
-
 watch(
   () => route.path,
   () => {
