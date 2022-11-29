@@ -116,7 +116,6 @@ watch(
     mobileMenuOpen.value = false;
     menuButtonText.value = "MENU";
     document.body.style.overflow = "scroll";
-    window.scrollTo(0, 0);
   }
 );
 </script>

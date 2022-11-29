@@ -24,6 +24,7 @@ onMounted(() => {
   const images = contactImages.value.querySelectorAll(
     ".contact-component__image-container__image"
   );
+
   let imagesArray = Array.from(images);
   let counter = 1;
 
