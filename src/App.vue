@@ -16,9 +16,9 @@ const footerMock = {
     title: "Reach out",
     links: [
       {
-        title: "hello@dinosource.be",
+        title: "hello@dinosource.agency",
         linkType: "email",
-        to: "hello@dinosource.be",
+        to: "hello@dinosource.agency",
       },
       {
         title: "+32 492 94 15 49",

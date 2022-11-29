@@ -7,7 +7,7 @@ export const contactPageMock = {
         title: "For the writers:",
         linkTitle: "hello@dinosource.agency",
         linkType: "email",
-        to: "hello@dinosource.be",
+        to: "hello@dinosource.agency",
       },
       {
         id: 1,
