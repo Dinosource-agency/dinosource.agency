@@ -26,7 +26,7 @@ export const contactPageMock = {
     ],
   },
   pictorial: {
-    image: "/images/jpg/groepsfoto.jpg",
+    image: "/images/jpg/fullTeam.webp",
     alt: "Group photo",
   },
 };

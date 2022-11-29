@@ -1,6 +1,6 @@
 export const AboutPageMock = {
   pictorial: {
-    image: "/images/jpg/groepsfoto.jpg",
+    image: "/images/jpg/fullTeam.webp",
     alt: "Group photo",
   },
   title: "Meet the NPCs at Dinosource V12",
