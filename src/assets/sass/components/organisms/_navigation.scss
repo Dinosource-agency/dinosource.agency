@@ -63,10 +63,14 @@
     &--open {
       display: none;
     }
+    .u-layout-constrain{
+      margin: 0;
+    }
     &__items {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
       &__item {
         font-size: 4rem;
         color: vars.$color-grey;

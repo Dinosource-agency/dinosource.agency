@@ -20,6 +20,7 @@
             to="/"
             link-type="internal"
             class="a-button o-navigation__items__item"
+            @click="scrollToTop"
             >How we roll</link-component
           >
           <link-component
@@ -27,6 +28,7 @@
             to="/work"
             link-type="internal"
             class="a-button o-navigation__items__item"
+            @click="scrollToTop"
             >What we do</link-component
           >
           <link-component
@@ -34,6 +36,7 @@
             to="/about"
             link-type="internal"
             class="a-button o-navigation__items__item"
+            @click="scrollToTop"
             >Who we are</link-component
           >
           <link-component
@@ -41,6 +44,7 @@
             to="/contact"
             link-type="internal"
             class="a-button a-button--primary o-navigation__items__item--primary"
+            @click="scrollToTop"
             >Reach out</link-component
           >
         </div>
@@ -54,10 +58,10 @@
     </div>
 
     <nav
-      class="o-navigation__mobile u-layout-grid"
+      class="o-navigation__mobile"
       :class="{ 'o-navigation__mobile--open': !mobileMenuOpen }"
     >
-      <div class="o-navigation__mobile__items">
+      <div class="o-navigation__mobile__items u-layout-constrain">
         <link-component
           title="Home"
           to="/"
@@ -108,6 +112,10 @@ const toggleMenu = () => {
     //showing the scroll
     document.body.style.overflow = "scroll";
   }
+};
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
 };
 
 watch(
