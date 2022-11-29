@@ -37,9 +37,9 @@ export const AboutPageMock = {
       {
         id: 3,
         imageSrc: "/images/team/ismail.webp",
-        imageAlt: "Picture of Ismael",
-        cardTitle: "Ismael",
-        name: ["Ismael"],
+        imageAlt: "Picture of Ismaïl",
+        cardTitle: "Ismaïl",
+        name: ["Ismaïl"],
       },
       {
         id: 4,
