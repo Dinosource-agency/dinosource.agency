@@ -1,6 +1,8 @@
 <script setup>
 import { contactInfoComponent, PictorialComponent } from "@/components";
 import { contactPageMock } from "@/mocks";
+import { useGtm } from "@gtm-support/vue-gtm";
+useGtm();
 </script>
 <template>
   <main>

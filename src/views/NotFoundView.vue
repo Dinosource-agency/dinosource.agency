@@ -1,5 +1,7 @@
 <script setup>
 import { DynamicHeadingComponent, LinkComponent } from "@/components";
+import { useGtm } from "@gtm-support/vue-gtm";
+useGtm();
 </script>
 <template>
   <section>

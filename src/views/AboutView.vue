@@ -9,6 +9,8 @@ import {
   ImageBannerComponent,
 } from "@/components";
 import { AboutPageMock } from "@/mocks";
+import { useGtm } from "@gtm-support/vue-gtm";
+useGtm();
 </script>
 <template>
   <mission-text-component

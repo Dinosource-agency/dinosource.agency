@@ -8,6 +8,8 @@ import {
   CardComponent,
 } from "@/components";
 import { WorkDetailMock } from "@/mocks";
+import { useGtm } from "@gtm-support/vue-gtm";
+useGtm();
 </script>
 
 <template>

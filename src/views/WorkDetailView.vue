@@ -13,7 +13,8 @@ import {
 } from "@/components";
 
 import { WorkDetailMock } from "@/mocks";
-
+import { useGtm } from "@gtm-support/vue-gtm";
+useGtm();
 const route = useRoute();
 const projectName = route.params.projectName;
 const project = WorkDetailMock.projects.find(
