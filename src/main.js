@@ -1,12 +1,16 @@
-import { createApp } from "vue";
-import { createGtm } from "@gtm-support/vue-gtm";
+import {createApp} from "vue";
+//import { createGtm } from "@gtm-support/vue-gtm";
+import VueGtag from "vue-gtag";
 import App from "./App.vue";
 import router from "./router";
 
 const app = createApp(App);
+app.use(VueGtag, {
+    config: {id: "GTM-MWFQWJ6"},
+})
 
 app.use(router);
-
+/*
 app.use(
   createGtm({
     id: "GTM-MWFQWJ6", // Your GTM single container ID, array of container ids ['GTM-xxxxxx', 'GTM-yyyyyy'] or array of objects [{id: 'GTM-xxxxxx', queryParams: { gtm_auth: 'abc123', gtm_preview: 'env-4', gtm_cookies_win: 'x'}}, {id: 'GTM-yyyyyy', queryParams: {gtm_auth: 'abc234', gtm_preview: 'env-5', gtm_cookies_win: 'x'}}], // Your GTM single container ID or array of container ids ['GTM-xxxxxx', 'GTM-yyyyyy']
@@ -21,5 +25,5 @@ app.use(
     trackOnNextTick: false, // Whether or not call trackView in Vue.nextTick
   })
 );
-
+*/
 app.mount("#app");

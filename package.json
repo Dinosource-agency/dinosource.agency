@@ -20,6 +20,7 @@
     "troisjs": "^0.3.4",
     "vue": "^3.2.38",
     "vue-feather-icons": "^5.1.0",
+    "vue-gtag": "^2.0.1",
     "vue-mq": "^1.0.1",
     "vue-router": "^4.1.5"
   },
