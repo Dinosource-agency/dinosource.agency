@@ -1,4 +1,4 @@
-import {createApp} from "vue";
+import { createApp } from "vue";
 //import { createGtm } from "@gtm-support/vue-gtm";
 import VueGtag from "vue-gtag";
 import App from "./App.vue";
@@ -6,8 +6,8 @@ import router from "./router";
 
 const app = createApp(App);
 app.use(VueGtag, {
-    config: {id: "GTM-MWFQWJ6"},
-})
+  config: { id: "GTM-MWFQWJ6" },
+});
 
 app.use(router);
 /*
