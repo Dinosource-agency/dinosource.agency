@@ -8,13 +8,13 @@ const app = createApp(App);
 app.use(router);
 
 app.use(
-    createGtm({
-        id: "GTM-MWFQWJ6",
-        enabled: true,
-        debug: true,
-        vueRouter: router,
-        ignoredViews: [],
-    })
+  createGtm({
+    id: "GTM-MWFQWJ6",
+    enabled: true,
+    debug: true,
+    vueRouter: router,
+    ignoredViews: [],
+  })
 );
 /*
 app.use(
