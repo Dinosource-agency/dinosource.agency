@@ -60,7 +60,7 @@ if (!project) {
     <div class="u-layout-constrain">
       <video-component
         class="p-work-detail__video-section__video"
-        :source="project.projectVideo"
+        :video-id="project.video"
       ></video-component>
     </div>
   </section>

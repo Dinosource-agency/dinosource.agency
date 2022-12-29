@@ -19,8 +19,7 @@ export const WorkDetailMock = {
         "One of the projects that involved the mentors of DesignoSource Generation 9 is One Woman Collective. Just like the name implies it’s a collective ran by one single woman named Linde Van Eijnde. She specialises in branding and creating immersive visual experiences which can be seen in all her projects.",
       logo: "/images/cases/owc/owc_logo.webp",
       alt: "Picture of One Woman Collective logo",
-      projectVideo:
-        "https://video-service.onrender.com/stream/one-women-collective.mp4",
+      video: "783657748",
       imageBanner: {
         title: "Get to know the vision of one woman collective.",
         description:
@@ -55,7 +54,7 @@ export const WorkDetailMock = {
         "Classy at first, Choas at midnight. Get ready for the party of your lifetime. Us tech nerds and design hippies will deliver the world with a party where hell breaks loose!",
       logo: "/images/cases/sweet16/sweet16_logo.webp",
       alt: "Picture of logo sweet 16",
-      projectVideo: "https://video-service.onrender.com/stream/sweet16.mp4",
+      video: "783660085",
       imageBanner: {
         title: "To y’all crazy folks, check out our legal disclaimer",
         description:
@@ -90,7 +89,7 @@ export const WorkDetailMock = {
         "We wanted to hook our student up with some cool merch to represent IMD outside the school walls. So we designed hoodies & t-shirts to make IMD vibey again!",
       logo: "/images/cases/imd-merch/merch_logo.webp",
       alt: "Picture of logo imd merch",
-      projectVideo: "https://video-service.onrender.com/stream/imd-merch.mp4",
+      video: "783659067",
       imageBanner: {
         title: "EAT PIXELS FOR BREAKFAST AND SHINE ALL DAY WITH THE IMD MERCH",
         description:
@@ -125,7 +124,7 @@ export const WorkDetailMock = {
         "Eleven creative crackheads that build explosive experiences for big league brands. Standing up for our opinions and beliefs is the only way we know. We take responsibility for staying involved, not giving a damn fuck what others think and feeling like the new wolves of wall street (less cocaine and stuff though). We’re your dream agency, but are you our dream client?",
       logo: "/images/cases/dinosource/dinosource_logo.webp",
       alt: "Picture of logo dinosource",
-      projectVideo: "https://video-service.onrender.com/stream/dinosource.mp4",
+      video: "783658995",
       imageBanner: {
         title: "HERE'S WHY WE WANT TO BE THE UGLY DUCKLING",
         description:
