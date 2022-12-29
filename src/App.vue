@@ -54,7 +54,7 @@ const footerMock = {
       {
         title: "LinkedIn",
         linkType: "external",
-        to: "https://www.tiktok.com/@dinosource.agency",
+        to: "https://www.linkedin.com/company/dinosource-agency/mycompany/",
       },
     ],
   },
