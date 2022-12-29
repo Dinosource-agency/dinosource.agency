@@ -5,18 +5,20 @@
     @cancel="rotateDinoHead"
   ></permission-modal>
   <section class="o-dino-header-hero">
-    <div class="o-dino-header-hero__text-wrapper">
-      <p
-        class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--first"
-      >
-        READY FOR
-      </p>
-      <p
-        class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--second"
-      >
-        IMPACT
-      </p>
-    </div>
+    <dynamic-heading-component heading-style="h1" heading-type="h1">
+      <div class="o-dino-header-hero__text-wrapper">
+        <p
+          class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--first"
+        >
+          READY FOR
+        </p>
+        <p
+          class="o-dino-header-hero__text-wrapper__text o-dino-header-hero__text-wrapper__text--second"
+        >
+          IMPACT
+        </p>
+      </div>
+    </dynamic-heading-component>
     <Renderer
       ref="rendererC"
       antialias
@@ -43,8 +45,11 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import PermissionModal from "@/components/modal/PermissionModal.vue";
-import ScrollDown from "@/components/btn/ScrollDown.vue";
+import {
+  PermissionModal,
+  ScrollDown,
+  DynamicHeadingComponent,
+} from "@/components";
 import {
   Camera,
   GltfModel,
