@@ -45,6 +45,7 @@ defineProps({
           :title="project.title"
           :slug="project.slug"
           :image="project.logo"
+          :alt="project.alt"
         ></project-showcase-model>
       </div>
       <link-component

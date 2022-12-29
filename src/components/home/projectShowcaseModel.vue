@@ -13,6 +13,10 @@ defineProps({
     type: String,
     required: true,
   },
+  alt: {
+    type: String,
+    required: true,
+  },
 });
 </script>
 <template>
@@ -22,7 +26,7 @@ defineProps({
       class="o-project-showcase-model__link"
       :to="`/work/${slug}`"
     >
-      <img class="o-project-showcase-model__image" :src="image" />
+      <img class="o-project-showcase-model__image" :alt="alt" :src="image" />
     </link-component>
   </div>
 </template>
