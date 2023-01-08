@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: 
+Disallow:
+
+Sitemap: https://dinosource.agency/sitemap.xml
+Host: dinosource.agency
