@@ -18,7 +18,7 @@ export const contactPageMock = {
       },
       {
         id: 2,
-        title: "For the travellers",
+        title: "For the travellers:",
         linkTitle: "Raghenoplein 21 bis 2800 Mechelen, BE Campus De Ham z0.14",
         linkType: "external",
         to: "https://www.thomasmore.be/",
